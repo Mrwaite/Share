@@ -2,6 +2,8 @@
 
 @(By Vitaly Friedman 译 陈威特)[前端, 性能]
 
+[原文](https://www.smashingmagazine.com/2016/12/front-end-performance-checklist-2017-pdf-pages/)
+
 你已经在使用渐进式启动了吗？那么React 和 Angular中的`tree-shaking`和`code-splitting`呢？你是否设置了 [Brotli](https://zh.wikipedia.org/wiki/Brotli) 或  [Zopfli](https://zh.wikipedia.org/wiki/Zopfli) 压缩,   [OCSP](https://zh.wikipedia.org/wiki/OCSP%E8%A3%85%E8%AE%A2) stapling,  [HPACK](https://http2.github.io/http2-spec/compression.html) 压缩呢？ 那么 [Resource Hints](https://www.keycdn.com/blog/resource-hints/),  [Client Hints](http://httpwg.org/http-extensions/client-hints.html) 和 [CSS Containment ](https://developers.google.com/web/updates/2016/06/css-containment) 呢？就更不用说 IPV6, HTTP/2,  [Server Workers](https://developer.mozilla.org/zh-CN/docs/Web/API/Service_Worker_API) 了。
 
 早些时候，性能问题往往都是项目完成之后考虑的。经常被推迟到项目末期，它将会被归结为压缩， 合并， 资源优化以及对服务器的一些配置文件做细微的调整。
