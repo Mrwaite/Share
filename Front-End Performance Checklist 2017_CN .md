@@ -1,8 +1,8 @@
-# 前端2017性能清单
+# 前端性能清单 2017
 
-@(前端学习笔记)[前端, 性能]
+@(By Vitaly Friedman 译 陈威特)[前端, 性能]
 
-你已经在使用渐进式启动了吗？那么React 和 Angular中的`tree-shaking`和`code-splitting`呢？你是否设置了 [Brotli](https://zh.wikipedia.org/wiki/Brotli) 或  [Zopfli](https://zh.wikipedia.org/wiki/Zopfli) 压缩,   [OCSP](https://zh.wikipedia.org/wiki/OCSP%E8%A3%85%E8%AE%A2) 封套,  [HPACK](https://http2.github.io/http2-spec/compression.html) 压缩呢？ 那么 [Resource Hints](https://www.keycdn.com/blog/resource-hints/),  [Client Hints](http://httpwg.org/http-extensions/client-hints.html) 和 [CSS Containment ](https://developers.google.com/web/updates/2016/06/css-containment) 呢？就更不用说 IPV6, HTTP/2,  [Server Workers](https://developer.mozilla.org/zh-CN/docs/Web/API/Service_Worker_API) 了。
+你已经在使用渐进式启动了吗？那么React 和 Angular中的`tree-shaking`和`code-splitting`呢？你是否设置了 [Brotli](https://zh.wikipedia.org/wiki/Brotli) 或  [Zopfli](https://zh.wikipedia.org/wiki/Zopfli) 压缩,   [OCSP](https://zh.wikipedia.org/wiki/OCSP%E8%A3%85%E8%AE%A2) stapling,  [HPACK](https://http2.github.io/http2-spec/compression.html) 压缩呢？ 那么 [Resource Hints](https://www.keycdn.com/blog/resource-hints/),  [Client Hints](http://httpwg.org/http-extensions/client-hints.html) 和 [CSS Containment ](https://developers.google.com/web/updates/2016/06/css-containment) 呢？就更不用说 IPV6, HTTP/2,  [Server Workers](https://developer.mozilla.org/zh-CN/docs/Web/API/Service_Worker_API) 了。
 
 早些时候，性能问题往往都是项目完成之后考虑的。经常被推迟到项目末期，它将会被归结为压缩， 合并， 资源优化以及对服务器的一些配置文件做细微的调整。
 现在回头想想， 事情似乎已经发生了很大的变化。
@@ -11,7 +11,6 @@
 
 所以，如果我们实际环境中已经涉及到了上述的东西，那么从开始到网站最终的发布提升性能时这些的东西都应该考虑进去。这篇性能清单看上去如何？下面你将会得到一份（希望是公正的客观的）前端2017性能清单——上述问题你可能需要去考虑，以便确保网页响应时间够快，够流畅。
 
-（你也可以下载 [PDF](http://provide.smashingmagazine.com/performance-checklist/performance-checklist-1.0.pdf?_ga=1.10326581.1636145688.1482371988) (0129MB) 或者 下载[Apple Pages](http://provide.smashingmagazine.com/performance-checklist/performance-checklist-1.0.pages?_ga=1.9820597.1636145688.1482371988)(0.236MB)）
 
 ----------------
 [TOC]
