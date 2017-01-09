@@ -1,0 +1,693 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Web 组前端入门方法</title>
+<style>
+body{
+    margin: 0 auto;
+    font-family: "ubuntu", "Tahoma", "Microsoft YaHei", arial,sans-serif;
+    color: #444444;
+    line-height: 1;
+    padding: 30px;
+}
+@media screen and (min-width: 1000px) {
+    body {
+        width: 980px;
+        margin: 10px auto;
+    }
+
+    img {
+        max-width: 980px;
+    }
+}
+h1, h2, h3, h4 {
+    color: #111111;
+    font-weight: 400;
+    margin-top: 1em;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: Georgia, Palatino, serif;
+}
+h1, h2, h3, h4, h5, dl{
+    margin-bottom: 16px;
+    padding: 0;
+}
+
+p {
+    margin-top: 8px;
+    margin-bottom: 3px;
+}
+h1 {
+    font-size: 48px;
+    line-height: 54px;
+}
+h2 {
+    font-size: 36px;
+    line-height: 42px;
+}
+h1, h2 {
+    border-bottom: 1px solid #EFEAEA;
+    padding-bottom: 10px;
+}
+h3 {
+    font-size: 24px;
+    line-height: 30px;
+}
+h4 {
+    font-size: 21px;
+    line-height: 26px;
+}
+h5 {
+    font-size: 18px;
+    line-height: 23px;
+}
+a {
+    color: #0099ff;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+a:hover {
+    text-decoration: none;
+    color: #ff6600;
+}
+a:visited {
+    /*color: purple;*/
+}
+ul, ol {
+    padding: 0;
+    padding-left: 24px;
+    margin: 0;
+}
+li {
+    line-height: 24px;
+}
+p, ul, ol {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+ol ol, ul ol {
+    list-style-type: lower-roman;
+}
+
+/*pre {
+    padding: 0px 24px;
+    max-width: 800px;
+    white-space: pre-wrap;
+}
+code {
+    font-family: Consolas, Monaco, Andale Mono, monospace;
+    line-height: 1.5;
+    font-size: 13px;
+}*/
+
+code, pre {
+    font-family: Consolas, Monaco, Andale Mono, monospace;
+    /*border-radius: 3px;*/
+    background-color:#f7f7f7;
+    color: inherit;
+}
+
+code {
+    font-family: Consolas, Monaco, Andale Mono, monospace;
+    margin: 0 2px;
+}
+
+pre {
+    font-family: Consolas, Monaco, Andale Mono, monospace;
+    line-height: 1.7em;
+    overflow: auto;
+    padding: 6px 10px;
+    border-left: 5px solid #6CE26C;
+}
+
+pre > code {
+    font-family: Consolas, Monaco, Andale Mono, monospace;
+    border: 0;
+    display: inline;
+    max-width: initial;
+    padding: 0;
+    margin: 0;
+    overflow: initial;
+    line-height: inherit;
+    font-size: .85em;
+    white-space: pre;
+    background: 0 0;
+
+}
+
+code {
+    color: #666555;
+}
+
+
+/** markdown preview plus 对于代码块的处理有些问题, 所以使用统一的颜色 */
+/*code .keyword {
+  color: #8959a8;
+}
+code .number {
+  color: #f5871f;
+}
+code .comment {
+  color: #998
+}*/
+
+aside {
+    display: block;
+    float: right;
+    width: 390px;
+}
+blockquote {
+    border-left:.5em solid #eee;
+    padding: 0 0 0 2em;
+    margin-left:0;
+}
+blockquote  cite {
+    font-size:14px;
+    line-height:20px;
+    color:#bfbfbf;
+}
+blockquote cite:before {
+    content: '\2014 \00A0';
+}
+
+blockquote p {
+    color: #666;
+}
+hr {
+    text-align: left;
+    color: #999;
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+}
+
+dl {
+    padding: 0;
+}
+
+dl dt {
+    padding: 10px 0;
+    margin-top: 16px;
+    font-size: 1em;
+    font-style: italic;
+    font-weight: bold;
+}
+
+dl dd {
+    padding: 0 16px;
+    margin-bottom: 16px;
+}
+
+dd {
+    margin-left: 0;
+}
+
+/* Code below this line is copyright Twitter Inc. */
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+    *vertical-align: middle;
+}
+button, input {
+    line-height: normal;
+    *overflow: visible;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+}
+input[type=checkbox], input[type=radio] {
+    cursor: pointer;
+}
+/* override default chrome & firefox settings */
+input:not([type="image"]), textarea {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+label,
+input,
+select,
+textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: normal;
+    margin-bottom: 18px;
+}
+input[type=checkbox], input[type=radio] {
+    cursor: pointer;
+    margin-bottom: 0;
+}
+input[type=text],
+input[type=password],
+textarea,
+select {
+    display: inline-block;
+    width: 210px;
+    padding: 4px;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 18px;
+    height: 18px;
+    color: #808080;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+select, input[type=file] {
+    height: 27px;
+    line-height: 27px;
+}
+textarea {
+    height: auto;
+}
+/* grey out placeholders */
+:-moz-placeholder {
+    color: #bfbfbf;
+}
+::-webkit-input-placeholder {
+    color: #bfbfbf;
+}
+input[type=text],
+input[type=password],
+select,
+textarea {
+    -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+    transition: border linear 0.2s, box-shadow linear 0.2s;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+    outline: none;
+    border-color: rgba(82, 168, 236, 0.8);
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+    -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+/* buttons */
+button {
+    display: inline-block;
+    padding: 4px 14px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    background-color: #0064cd;
+    background-repeat: repeat-x;
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#049cdb), to(#0064cd));
+    background-image: -moz-linear-gradient(top, #049cdb, #0064cd);
+    background-image: -ms-linear-gradient(top, #049cdb, #0064cd);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #049cdb), color-stop(100%, #0064cd));
+    background-image: -webkit-linear-gradient(top, #049cdb, #0064cd);
+    background-image: -o-linear-gradient(top, #049cdb, #0064cd);
+    background-image: linear-gradient(top, #049cdb, #0064cd);
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    border: 1px solid #004b9a;
+    border-bottom-color: #003f81;
+    -webkit-transition: 0.1s linear all;
+    -moz-transition: 0.1s linear all;
+    transition: 0.1s linear all;
+    border-color: #0064cd #0064cd #003f81;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+button:hover {
+    color: #fff;
+    background-position: 0 -15px;
+    text-decoration: none;
+}
+button:active {
+    -webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+table {
+    *border-collapse: collapse; /* IE7 and lower */
+    border-spacing: 0;
+    width: 100%;
+}
+table {
+    border: solid #ccc 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    /*-webkit-box-shadow: 0 1px 1px #ccc;
+    -moz-box-shadow: 0 1px 1px #ccc;
+    box-shadow: 0 1px 1px #ccc;   */
+}
+table tr:hover {
+    background: #fbf8e9;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+table td, .table th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    /*-webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;*/
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    padding: 5px;
+}
+
+table td:first-child, table th:first-child {
+    border-left: none;
+}
+
+table th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+table th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+table th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+table tr:last-child td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+table tr:last-child td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+</style>
+</head>
+<body>
+<div id="wmd-preview" class="wmd-preview"><div class="md-section-divider"></div><div class="md-section-divider"></div><h1 data-anchor-id="wd2n" id="web-组前端入门方法">Web 组前端入门方法</h1><p data-anchor-id="h8qx"><code>web</code> <code>组</code></p><hr><p data-anchor-id="1w1q">注:本文由 leozhang2018 整理，集结于网络上多方资源,不可公开传播，仅限于网协 web 组内部参阅，已经加入数字指纹，如有外泄，一律严惩不贷。</p><ul data-anchor-id="8oa6">
+<li><a href="#Front-End">FE-learning</a> <br>
+<ul><li><a href="#必备基础技能">必备基础技能</a></li>
+<li><a href="#基本开发工具">基本开发工具</a></li>
+<li><a href="#学习方法和学习目标">学习方法和学习目标</a></li>
+<li><a href="#入门之路">入门之路</a></li>
+<li><a href="#部分书籍电子版">部分书籍电子版</a></li>
+<li><a href="#检验成果">检验成果</a></li>
+<li><a href="#继续提高">继续提高</a></li>
+<li><a href="#书籍推荐">书籍推荐</a></li>
+<li><a href="#一些个人经历">一些人的经历</a></li>
+<li><a href="#asd123freedomhttpsgithubcomasd123freedom的学习经历">[asd123freedom](https://github.com/asd123freedom)的学习经历</a></li>
+<li><a href="#sue891206httpsgithubcomsue891206的学习经历">[sue891206](https://github.com/sue891206)的学习经历</a></li>
+<li><a href="#sheetaahttpsgithubcomsheetaa的学习经历">[Sheetaa](https://github.com/Sheetaa)的学习经历</a></li>
+<li><a href="#suikaxinhttpsgithubcomsuikaxin的学习经历">[suikaxin](https://github.com/suikaxin)的学习经历</a></li>
+<li><a href="#quanxi613httpsgithubcomquanxi613的学习经历">[quanxi613](https://github.com/quanxi613)的学习经历</a></li>
+<li><a href="#lingyucoderhttpsgithubcomlingyucoder的学习经历">[LingyuCoder](https://github.com/LingyuCoder)的学习经历</a> <br>
+<ul><li><a href="#工具">工具</a></li>
+<li><a href="#技能">技能</a></li>
+<li><a href="#语言基础">语言基础</a></li>
+<li><a href="#进阶">进阶</a></li>
+<li><a href="#项目">项目</a></li>
+<li><a href="#未来">未来</a></li>
+<li><a href="#其他">其他</a></li>
+<li><a href="#入门书">入门书</a></li>
+<li><a href="#一些不错的网站">一些不错的网站</a></li>
+<li><a href="#历程">历程</a></li></ul></li>
+<li><a href="#zwl4488httpsgithubcomzwl4488的学习经历">[zwl4488](https://github.com/zwl4488)的学习经历</a></li>
+<li><a href="#mrraindrophttpsgithubcommrraindrop的学习经历">[MrRaindrop](https://github.com/MrRaindrop)的学习经历</a> <br>
+<ul><li><a href="#缘起">缘起</a></li>
+<li><a href="#项目，下一个项目">项目，下一个项目</a></li>
+<li><a href="#收集癖和知识管理">收集癖和知识管理</a></li>
+<li><a href="#跟对神">跟对神</a></li>
+<li><a href="#读书">读书</a></li>
+<li><a href="#前端的定位">前端的定位</a></li>
+<li><a href="#最后">最后</a></li></ul></li>
+<li><a href="#zyr2014httpsgithubcomzyr2014的学习经历">[zyr2014](https://github.com/zyr2014)的学习经历</a></li>
+<li><a href="#zhangtaibaihttpsgithubcomzhangtaibai的学习经历">[zhangtaibai](https://github.com/zhangtaibai)的学习经历</a></li>
+<li><a href="#byr论坛yiyizym的建议">byr论坛yiyizym的建议</a></li></ul></li>
+</ul><div class="md-section-divider"></div><h1 data-anchor-id="1cav" id="front-end">Front-End</h1><p data-anchor-id="g8pg">结合个人经历总结的前端入门方法，总结从零基础到具备前端基本技能的道路、学习方法、资料。由于能力有限，不能保证面面俱到，只是作为入门参考，面向初学者，让初学者少走弯路。</p><p data-anchor-id="zrwn">互联网的快速发展和激烈竞争，用户体验成为一个重要的关注点，导致专业前端工程师成为热门职业，各大公司对前端工程师的需求量都很大，要求也越来越高，优秀的前端工程师更是稀缺。个人感觉前端入门相对容易，但是也需要系统地认真学习，在打好基础后坚持学习，成为优秀前端工程师也只是时间问题。</p><p data-anchor-id="17j8">学习任何知识最重要的都是<strong>兴趣</strong>，如果经过一段时间的学习感觉不喜欢，那可能强迫自己学习是很痛苦的，效果也不会好，毕竟这很可能就是以后很多年生存的技能。不过随着互联网行业的发展，前端必然是Web开发人员需要学习的知识，有时候是没有专业前端工程师一起合作的，所以即使不做专门的前端工程师，掌握基本的前端技能为工作带来方便。</p><div class="md-section-divider"></div><h2 data-anchor-id="tcds" id="必备基础技能">必备基础技能</h2><p data-anchor-id="3rkk"><a href="https://github.com/JacksonTian/fks" target="_blank">前端技能汇总</a> <br>
+该项目详细记录了前端工程师牵涉到的各方面知识。在具备基本技能之后可以在里面找到学习 <br>
+的方向，完善技能和知识面。</p><p data-anchor-id="f4zr">以下是个人觉得入门阶段应该熟练掌握的基础技能：</p><ul data-anchor-id="iqvn">
+<li><a href="http://www.w3.org/TR/html401/cover.html#minitoc" target="_blank">HTML4</a>，<a href="http://www.w3.org/TR/html5/#contents" target="_blank">HTML5</a> 语法、标签、语义</li>
+<li><a href="http://www.w3.org/TR/CSS2/#minitoc" target="_blank">CSS2.1</a>，<a href="http://www.w3.org/TR/2001/WD-css3-roadmap-20010523/#table" target="_blank">CSS3</a> 规范，与 HTML 结合实现各种布局、效果</li>
+<li><a href="http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf" target="_blank">Ecma-262</a>定义的 Javascript的语言核心，原生<a href="https://developer.mozilla.org/en-US/docs/Web/API" target="_blank">客户端 Javascript</a>，<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" target="_blank">DOM 操作</a>，<a href="https://developer.mozilla.org/en/docs/web/Guide/HTML/HTML5" target="_blank">HTML5 新增功能</a></li>
+<li>一个成熟的客户端 Javascript库，推荐<a href="http://jquery.com/" target="_blank">JQuery</a></li>
+<li>一门服务器端语言：如果有服务器端开发经验，使用已经会的语言即可，如果没有服务器端开发经验，熟悉 Java 可以选择 Servlet，不熟悉的可以选 PHP，能实现简单登陆注册功能就足够支持前端开发了，后续可能需要继续学习，最基本要求是实现简单的功能模拟，</li>
+<li><a href="http://www.w3.org/Protocols/rfc2616/rfc2616.html" target="_blank">HTTP</a></li>
+</ul><p data-anchor-id="eism">在掌握以上基础技能之后，工作中遇到需要的技术也能快速学习。</p><div class="md-section-divider"></div><h2 data-anchor-id="xa1f" id="基本开发工具">基本开发工具</h2><p data-anchor-id="30wp">恰当的工具能有效提高学习效率，将重点放在知识本身，在出现问题时能快速定位并 <br>
+解决问题，以下是个人觉得必备的前端开发工具：</p><p data-anchor-id="g1ot"><strong>文本编辑器</strong>：</p><ul data-anchor-id="gmhn">
+<li>首推 <a href="http://www.sublimetext.com/" target="_blank">Sublime Text</a> :支持各种插件、主题、设置，使用方便</li>
+<li>其次 <a href="http://brackets.io/" target="_blank">Adobe Bracket</a> :支持各种插件、主题、设置，使用方便,自带预览</li>
+<li>最后是 Github 的 <a href="https://atom.io/" target="_blank">Atom</a> :Github 自家出产编辑器,同样支持各种插件、主题、设置，使用方便</li>
+</ul><p data-anchor-id="8dqu"><strong>浏览器</strong>：</p><ul data-anchor-id="nqt0">
+<li><a href="http://down.tech.sina.com.cn/page/40975.html" target="_blank">Google Chrome</a>，力荐，更新快，对前端各种标(尤其是新标准)准提供了非常好的支持</li>
+<li><a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a> 火狐浏览器，Mozilla 的大名不用说。</li>
+</ul><p data-anchor-id="tvmj"><strong>调试工具</strong>： <br>
+ - 推荐 Chrome 自带的 <a href="https://developer.chrome.com/devtools" target="_blank">Chrome develop tools</a>，可以轻松查看 DOM 结构、样式，通过控制台输出调试信息，调试 JavaScript，查看网络请求等。 <br>
+ - <a href="http://getfirebug.com/" target="_blank">Firebug</a> Firefox 浏览器御用调试工具。</p><p data-anchor-id="b1x9"><strong>辅助工具</strong>：</p><ul data-anchor-id="apel">
+<li>PhotoShop 编辑图片、取色</li>
+<li>Adobe Fireworks 量尺寸</li>
+<li><a href="https://github.com/AlloyTeam/AlloyDesigner" target="_blank">AlloDesigner</a> (鹅厂 Alloyteam 出品)对比尺寸</li>
+<li><a href="http://www.getmarkman.com/" target="_blank">马克鳗</a> 高效的设计稿标注、测量工具</li>
+</ul><p data-anchor-id="7om5"><strong>科学上网(翻墙)工具</strong>： <br>
+实验室自带科学上网和国外站点加速,旨为提高大家效率。遇到问题，中文搜索不到的可以英文搜索 Google，尽情的浏览 stackoverflow 环境已经完备，就看你来不来了。</p><div class="md-section-divider"></div><h2 data-anchor-id="gjjw" id="学习方法和学习目标">学习方法和学习目标</h2><p data-anchor-id="9cpo">方法：</p><ol data-anchor-id="fg4t">
+<li>入门阶段反复阅读<strong>经典书籍的中文版</strong>，书籍中的每一个例子都动手实现并在浏览器中查看效果</li>
+<li>在具备一定基础之后可以上网搜各种教程、demo，了解各种功能的实际用法和常见功能的实现方法</li>
+<li>阅读HTML，CSS，Javascript标准全面完善知识点</li>
+<li>阅读前端牛人的博客、文章提升对知识的理解</li>
+<li>善用搜索引擎</li>
+</ol><p data-anchor-id="0urv">目标：</p><ol data-anchor-id="tfqy">
+<li>熟记前面知识点部分的重要概念，结合学习经历得到自己的理解</li>
+<li>熟悉常见功能的实现方法，如常见CSS布局，Tab控件等。</li>
+</ol><div class="md-section-divider"></div><h2 data-anchor-id="mtd2" id="入门之路">入门之路</h2><p data-anchor-id="yf67">以下是入门阶段不错的书籍和资料，列表后面有一些电子版下载链接</p><ol data-anchor-id="qxn3">
+<li>HTML 先看<a href="http://www.amazon.cn/gp/product/B00BMK4GKW/ref=s9_simh_gw_p14_d0_i2?pf_rd_m=A1AJ19PSB66TGU&amp;pf_rd_s=center-2&amp;pf_rd_r=1AH2NF64STS19GY8GR54&amp;pf_rd_t=101&amp;pf_rd_p=108773272&amp;pf_rd_i=899254051" target="_blank">《HTML &amp; CSS: Design and Build Websites》</a>1-9章，然后<a href="http://www.amazon.cn/HTML5%E7%A7%98%E7%B1%8D-Matthew-MacDonald/dp/B009DFCZAQ/ref=sr_1_1?ie=UTF8&amp;qid=1414740812&amp;sr=8-1&amp;keywords=html5+the+missing+manual" target="_blank">《HTML5: The Missing Manual》</a>1-4章。</li>
+<li>CSS 先看<a href="http://www.amazon.cn/CSS-The-Missing-Manual-Mcfarland-David-Sawyer/dp/0596802447/ref=sr_1_1?ie=UTF8&amp;qid=1414742710&amp;sr=8-1&amp;keywords=css+the+missing+manual+2" target="_blank">《CSS: The Missing Manual》</a>，然后[《CSS 权威指南》],之后<a href="http://book.douban.com/subject/4736167/" target="_blank">《精通 CSS》</a></li>
+<li>Javascript 先看<a href="http://www.amazon.cn/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-%E6%B3%BD%E5%8D%A1%E6%96%AF/dp/B007OQQVMY/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1414744358&amp;sr=1-1&amp;keywords=javascript+%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1" target="_blank">《Javascript高级程序设计》</a>，然后<a href="http://www.amazon.cn/O-Reilly%E7%B2%BE%E5%93%81%E5%9B%BE%E4%B9%A6%E7%B3%BB%E5%88%97-JavaScript%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97-%E5%BC%97%E5%85%B0%E7%BA%B3%E6%A0%B9/dp/B007VISQ1Y/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1414744401&amp;sr=1-1&amp;keywords=javascript+%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97" target="_blank">《JavaScript权威指南》</a></li>
+<li>HTTP 看<a href="http://book.douban.com/subject/10746113/" target="_blank">《HTTP 权威指南》</a></li>
+<li>在整个学习过程中 HTML,CSS 以及 JavaScript会有很多地方需要互相结合，实际工作中也是这样，一个简单的功能模块都需要三者结合才能实现。</li>
+<li>动手是学习的重要组成部分，书籍重点讲解知识点，例子可能不是很充足，这就需要利用搜索引擎寻找一些简单教程，照着教程实现功能。以下是一些比较好的教程网址: <br>
+<ul><li>CSS各种布局<a href="http://blog.html.it/layoutgala/" target="_blank">http://blog.html.it/layoutgala/</a></li>
+<li>可以搜索各大公司前端校招笔试面试题作为练习题或者他人总结的<a href="https://github.com/darcyclarke/Front-end-Developer-Interview-Questions/tree/master/Translations/Chinese" target="_blank">前端面试题</a>还有<a href="https://github.com/qiu-deqing/FE-interview" target="_blank">个人总结的面试题</a>（带参考答案）</li>
+<li><a href="http://code.tutsplus.com" target="_blank">http://code.tutsplus.com</a> 有各种各样的教程</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web" target="_blank">MDN</a> 也有很多教程，更重要的是里面有详细的文档，需要查找某个功能时在Google搜索：<code>xxx site:https://developer.mozilla.org</code></li>
+<li><a href="http://www.html5rocks.com/zh/" target="_blank">http://www.html5rocks.com/zh/</a>也有很多优质教程</li>
+<li><a href="http://www.sitepoint.com/" target="_blank">http://www.sitepoint.com/</a></li>
+<li><a href="http://alistapart.com/" target="_blank">http://alistapart.com/</a></li></ul></li>
+<li>原生 Javascript 是需要重点掌握的技能，在掌握原生 Javascript 的基础上推荐熟练掌握 jQuery，在实际工作中用处很大，这方面的书籍有<a href="http://www.amazon.com/Learning-jQuery-Fourth-Jonathan-Chaffer/dp/178216314X/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1410099243&amp;sr=1-1&amp;keywords=learning+jquery" target="_blank">《Learning jQuery》</a>前往<a href="http://learn.jquery.com/" target="_blank"> jQuery 官网</a>看官方文档</li>
+<li>建一个<a href="https://github.com/" target="_blank">https://github.com/</a>账号，保存平时学习中的各种代码和项目。</li>
+<li>有了一定基础之后可以搭建个人博客，记录学习过程中遇到的问题和解决方法，方便自己随时查阅也为其他人提供了帮助。</li>
+<li>经常使用 Google 搜索英文资料应该经常参阅来自 <a href="http://stackoverflow.com/" target="_blank">Stackoverflow</a> 的高质量答案，国内的可以参考<a href="http://segmentfault.com/" target="_blank">Segmentfault</a>,遇到问题可以直接在这里搜索，如果有精力，注册一个账号为别人解答问题也能极大提高个人能力。注意平时也要<strong>提高英语能力</strong>。</li>
+<li>经典书籍熟读之后，可以打开前面必备基础技能部分的链接。认真读对应标准，全面掌握知识结构。</li>
+</ol><div class="md-section-divider"></div><h2 data-anchor-id="7zjp" id="检验成果">检验成果</h2><p data-anchor-id="6tx1">亲自实现下面的例子，能兼容 IE6+ 就最好了</p><ul data-anchor-id="x55i">
+<li><a href="http://blog.html.it/layoutgala/" target="_blank">http://blog.html.it/layoutgala/</a>:同一个HTML 文件通过 CSS 完成 40 种不同布局，兼顾兼容性</li>
+<li><a href="http://js.fgm.cc/learn/" target="_blank">http://js.fgm.cc/learn/</a>:完成和这里一模一样的功能、布局。</li>
+<li>模拟实现常用 5 个网站的首页页面</li>
+<li><a href="https://github.com/ecomfe/moye" target="_blank">https://github.com/ecomfe/moye</a>：实现这个组件库中的所有组件</li>
+</ul><div class="md-section-divider"></div><h2 data-anchor-id="l7wg" id="继续提高">继续提高</h2><p data-anchor-id="x882">有了前面的基础之后，前端基本算是入门了，这时候可能每个人心中都有了一些学习方向，如果还是没有。 <br>
+可以参考前面必备技能部分提到的那个项目，从里面选一些进行发展学习。以下是一些不错的方面： <br>
+- <a href="http://gulpjs.com/" target="_blank">Gulp</a>：前端自动化工具，提高工作效率 <br>
+- <a href="http://gruntjs.com/" target="_blank">Grunt</a>：前端自动化工具，提高工作效率 <br>
+- <a href="http://lesscss.org/" target="_blank">Less</a>：优秀的 CSS 预处理器 <br>
+- <a href="http://sass-lang.com/" target="_blank">Sass</a>：优秀的 CSS 预处理器 <br>
+- <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>：优秀的 CSS 框架，对没有设计师的团队很不错，与 Less 结合使用效果完美 <br>
+- <a href="http://requirejs.org/" target="_blank">Requirejs</a>：AMD规范的模块加载器，前端模块化趋势的必备工具 <br>
+- <a href="http://nodejs.org/" target="_blank">Node.js</a>：JavaScript 也可以做后台写服务端，前端工程师地位更上一步 <br>
+- <a href="https://angularjs.org/" target="_blank">AngularJS</a>：做 SPA--Single Page Application （单页应用）的好工具 <br>
+- <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Mobile" target="_blank">移动端 WEB 开发</a>：智能手机的普及让移动端的流量正在逐步赶超 PC 端 <br>
+- <a href="https://developer.chrome.com/devtools/docs/javascript-memory-profiling?hl=figoogle" target="_blank">Javascript 内存管理</a>：SPA 长期运行需要注意内存泄露的问题 <br>
+- <a href="http://www.amazon.com/Performance-JavaScript-Faster-Application-Interfaces/dp/059680279X/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=undefined&amp;sr=1-1&amp;keywords=high+performance+javascript" target="_blank">High Performance JavaScript(Build Faster Web Application Interfaces)</a> 高性能 JavaScript <br>
+- <a href="https://developer.yahoo.com/performance/rules.html" target="_blank">Best Practices for Speeding Up Your Web Site</a>：重要技能之一————加速你的网页，前端性能实践 <br>
+- 读 jQuery 源码</p><div class="md-section-divider"></div><h2 data-anchor-id="uin1" id="书籍推荐">书籍推荐</h2><p data-anchor-id="kbss">以下是一些不错的书籍、网站、教程推荐。</p><ul data-anchor-id="an3p">
+<li><a href="http://www.amazon.cn/Ajax%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C-%E6%B3%A2%E7%BB%B4%E5%B0%94/dp/B001N6R0Q2/ref=sr_1_2?ie=UTF8&amp;qid=1410104972&amp;sr=8-2&amp;keywords=ajax%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8C" target="_blank">《Ajax 完全手册》</a>：一本Ajax很不错的书，例子多，实现了一个Ajax库</li>
+<li><a href="http://www.amazon.com/Pro-AngularJS-Experts-Voice-Development/dp/1430264489/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1410105152&amp;sr=1-1&amp;keywords=pro+angularjs" target="_blank">《Pro AngularJS》</a>：AngularJS很好的书籍</li>
+<li><a href="http://www.amazon.com/CSS-Mastery-Advanced-Standards-Solutions/dp/1430223979/ref=sr_1_1?ie=UTF8&amp;qid=1410137090&amp;sr=8-1&amp;keywords=css+mastery+advanced+web+standards+solutions" target="_blank">《精通 CSS：高级 web 标准解决方法》</a>：CSS实用技能</li>
+<li><a href="https://developer.chrome.com/devtools/docs/javascript-memory-profiling?hl=figoogle" target="_blank">JavaScript Memory Profiling</a></li>
+<li><a href="http://www.amazon.com/HTML5-Canvas-Steve-Fulton/dp/1449334989/ref=sr_1_1?ie=UTF8&amp;qid=undefined&amp;sr=8-1&amp;keywords=html5+canvas" target="_blank">《HTML5 Canvas》</a>：Canvas 是 HTML5 带来的一个很棒的特性，从此图形动画不在依赖于 Flash</li>
+<li><a href="http://www.amazon.com/Pro-Node-js-Developers-Colin-Ihrig/dp/1430258608/ref=sr_1_1?ie=UTF8&amp;qid=undefined&amp;sr=8-1&amp;keywords=pro+nodejs+for+developers" target="_blank">《Pro Node.js for Developers》</a>：node发展太快。里面很多API都过时了，尽量参考官方API，不过还是值得一看</li>
+<li><a href="http://www.amazon.com/Node-js-Action-Mike-Cantelon/dp/1617290572/ref=sr_1_1?ie=UTF8&amp;qid=1410138522&amp;sr=8-1&amp;keywords=node+js+in+action" target="_blank">《Node.js in Action》</a>：不错的 Node 入门书籍</li>
+<li><a href="http://www.amazon.com/Single-Page-Applications-end---end/dp/1617290750/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1410138650&amp;sr=1-1&amp;keywords=single+page+application" target="_blank">《Single Page Web Applications: JavaScript end-to-end》</a>：一步步完成简单 SPA</li>
+<li><a href="http://www.amazon.com/Web-Development-Node-Express-Leveraging/dp/1491949309/ref=sr_1_sc_1?ie=UTF8&amp;qid=1415106115&amp;sr=8-1-spell&amp;keywords=web+development+width+node+and+express" target="_blank">《Web Development width Node &amp; Express》</a>：使用 Node+Express 完成一个项目，各种最佳实践，需要有一定基础，偏向于后端，NodeJs 近年来很火爆，而且频繁的被用于大厂中的生产环境，但是我会告诉你未来会更火爆。</li>
+<li><a href="http://www.amazon.com/Maintainable-JavaScript-Nicholas-C-Zakas/dp/1449327680/ref=sr_1_1?ie=UTF8&amp;qid=1416826732&amp;sr=8-1&amp;keywords=maintainable+javascript" target="_blank">Maintainable JavaScript</a></li>
+<li><a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/" target="_blank">Learning JavaScript design patterns</a></li>
+</ul><div class="md-section-divider"></div><h2 data-anchor-id="lfsb" id="技能">技能</h2><p data-anchor-id="0ehg">前端的技能其实除了 JavaScript（包括NodeJS）、HTML、CSS 以外，还有很多。其实前端的技能树很大，这里只能列一些开发中见到的说一说</p><div class="md-section-divider"></div><h4 data-anchor-id="sssk" id="语言基础">语言基础</h4><p data-anchor-id="x0zt">JavaScript： <br>
+* 作用域链、闭包、运行时上下文、this <br>
+* 原型链、继承 <br>
+* NodeJS 基础和常用API</p><p data-anchor-id="r842">CSS： <br>
+* 选择器 <br>
+* 浏览器兼容性及常见的hack处理 <br>
+* CSS 布局的方式和原理（盒子模型、BFC、IFC等等） <br>
+* CSS 3，如 Animation、Gradient、等等</p><p data-anchor-id="7lyo">HTML： <br>
+* 语义化标签</p><div class="md-section-divider"></div><h5 data-anchor-id="py00" id="进阶">进阶</h5><p data-anchor-id="wx92">JavaScript: <br>
+* 异步控制（Promise、ES6 generator、Async） <br>
+* 模块化的开发方式（AMD、CMD、KMD等等） <br>
+* JavaScript 解释器的一些相关知识 <br>
+    - 异步 IO 实现 <br>
+    - 垃圾回收 <br>
+    - 事件队列 <br>
+* 常用框架使用及其原理 <br>
+    - jQuery：基于选择器的框架，但个人认为不能叫框架，应该算工具库，因为不具备模块加载机制，其中源码很适合阅读钻研 <br>
+    - AngularJS/Avalon等 MVVM 框架：着重理解 MVVM 模式本身的理念和双向绑定的实现，如何解耦 <br>
+    - underscore：优秀的工具库，方便的理解常用工具代码片段的实现 <br>
+    - polymer/React: 组件化开发，面向未来，理解组件化开发的原理</p><p data-anchor-id="lxvs">CSS和HTML：主要是CSS3的特性和HTML5的特性，以及浏览器处理的流程和绘制原理 <br>
+* DOM树、CSSOM树、渲染树的构建流程及页面渲染的过程 <br>
+* 解析HTML、CSS、JavaScript时造成的阻塞 <br>
+* HTML5相关 <br>
+    - SVG及矢量图原理 <br>
+    - Canvas开发及动画原理（帧动画） <br>
+    - Video和Audio <br>
+* flex box布局方式 <br>
+* icon fonts的使用</p><p data-anchor-id="hmem">常用NodeJs的package： <br>
+* koa <br>
+* express <br>
+* underscore <br>
+* async <br>
+* gulp <br>
+* grunt <br>
+* connect <br>
+* request</p><p data-anchor-id="ixhd">一些理念： <br>
+* 响应式Web <br>
+* 优雅降级、渐进增强 <br>
+* don`t make me think <br>
+* 网页可用性、可访问性、其中的意义 <br>
+* SEO搜索引擎优化，了解搜索引擎的原理 <br>
+* SPA的好处和问题</p><p data-anchor-id="kuh5">性能优化： <br>
+* 减少请求数量（sprite、combo） <br>
+* 善用缓存（application cache、http缓存、CDN、localstorage、sessionstorage，备忘录模式） <br>
+* 减少选择器消耗（从右到左），减少DOM操作（DOM和JavaScript解释器的分离） <br>
+* CSS的回流与重绘</p><div class="md-section-divider"></div><h5 data-anchor-id="j7se" id="项目">项目</h5><ul data-anchor-id="xxkd">
+<li>版本管理：首推Git，用过Git都不会想用SVN了 <br>
+<ul><li>Git：本地版本管理的机制</li>
+<li>SVN：远程中心的版本管理机制</li></ul></li>
+<li>自动化构建：主要就是less、模板、coffee等的预处理以及对代码压缩和合并 <br>
+<ul><li>Gulp：基于流构建，速度快、模块质量好</li>
+<li>Grunt：独立任务构建，速度慢，配置蛋疼，灵活性高</li></ul></li>
+<li>预处理和模板引擎 <br>
+<ul><li>less：语法简单，但功能有限</li>
+<li>jade、ejs、velocity等模板引擎，各有各的长处</li>
+<li>coffee：python工程师最爱，我没用过</li></ul></li>
+<li>环境搭建：主要是将线上代码映射到本地，并在本地启动一个demo服务器，至于模拟数据的mock，见仁见智了 <br>
+<ul><li>本地代理：ihosts</li></ul></li>
+<li>自动化测试：在业务较为稳定的情况下，可以通过自动化测试来减少测试的事件，但需求较多的时候，维护测试用例的成本会很高，可能用自动化测试会起到反效果 <br>
+<ul><li>jasmine</li>
+<li>mocha</li></ul></li>
+<li>生态系统 <br>
+<ul><li>npm</li>
+<li>bower</li>
+<li>spm</li></ul></li>
+<li>搭建一个属于自己的博客 <br>
+<ul><li>git pages</li>
+<li>hexo</li>
+<li>jekyll</li></ul></li>
+</ul><div class="md-section-divider"></div><h5 data-anchor-id="vqxr" id="未来">未来</h5><ul data-anchor-id="4nvr">
+<li>Web Componets：面向未来的组件化开发方式 <br>
+<ul><li>HTML模板</li>
+<li>Shadow DOM</li>
+<li>Custom Elements</li>
+<li>HTML Import</li></ul></li>
+<li>移动端Native开发：这也是需要了解的，以后前端工程师会经常地和webview打交道，也要了解native开发</li>
+</ul><div class="md-section-divider"></div><h5 data-anchor-id="q8sv" id="其他">其他</h5><p data-anchor-id="ulue">有些东西不是考敲码就能弄好的，我参与实习的时候感受到了很多，这些是我遇到的也是我感觉自己做的不好的地方 <br>
+* <strong>对于业务的思考</strong>：我个人这方面非常欠缺，所以放在最前面，在敲码前要多思考业务 <br>
+* 交流和沟通能力：这个非常重要，前端同时需要与项目经理、产品、交互、后台打交道，沟通不善会导致很多无用功，延缓项目 <br>
+* 知识管理、时间管理：input和output的平衡，output是最好的input。如何做好分享，参与社区，做好交流，作好记录 <br>
+* 对新技术的渴望，以及敢于尝试</p><div class="md-section-divider"></div><h4 data-anchor-id="6gy0" id="入门书">入门书</h4><p data-anchor-id="ahd5">入门可以通过啃书，但书本上的东西很多都已经过时了，在啃书的同时，也要持续关注技术的新动态。这里推几本我觉着不错的书：</p><ul data-anchor-id="fj2z">
+<li>《JavaScript高级编程》：可以作为入门书籍，但同时也是高级书籍，可以快速吸收基础，等到提升再回来重新看</li>
+<li>《JavaScript权威指南》：不太适合入门，但是必备，不理解的地方就去查阅一下，很有帮助</li>
+<li>《编写可维护的JavaScript》和：</li>
+<li>《Node.js开发指南》：不错的Nodejs入门书籍</li>
+<li>《深入浅出Node.js》：Nodejs进阶书籍，必备</li>
+<li>《JavaScript异步编程》：理解JS异步的编程理念</li>
+<li>《JavaScript模式》和《JavaScript设计模式》：JavaScript的代码模式和设计模式，将开发思维转变到JavaScript，非常好的书</li>
+<li>《JavaScript框架设计》：在用轮子同时，应当知道轮子是怎么转起来的，讲解很详细，从源码级别讲解框架的各个部分的实现，配合一个现有框架阅读，可以学到很多东西</li>
+<li>《Don`t make me think》：网页设计的理念，了解用户行为，非常不错</li>
+<li>《CSS禅意花园》：经久不衰的一部著作，同样传递了网页设计中的理念以及设计中需要注意的问题</li>
+<li>《高性能JavaScript》和《高性能HTML5》：强调性能的书，其中不只是性能优化，还有很多原理层面的东西值得学习</li>
+<li>《HTML5 Canvas核心技术》：我正在读的一本书，对于canvas的使用，动画的实现，以及动画框架的开发都非常有帮助</li>
+<li>《HTTP权威指南》：HTTP协议相关必备，前端开发调试的时候也会经常涉及到其中的知识</li>
+<li>《响应式Web设计》：技术本身不难，重要的是响应式网页的设计理念，以及移动先行的思想</li>
+<li>《JavaScript语言精粹》：老道的书，也是普及JavaScript的开发思维的一本好书，非常适合入门</li>
+</ul><div class="md-section-divider"></div><h4 data-anchor-id="4a6c" id="一些不错的网站">一些不错的网站</h4><ul data-anchor-id="8bv7">
+<li><a href="https://github.com" target="_blank">github</a>：没啥好说的，多阅读别人的源码，多上传自己的源码，向世界各地的大牛学习</li>
+<li><a href="http://codepen.io/" target="_blank">codepen</a>：感受前端之美的必选之地，里面有很多酷炫的效果和优秀的插件</li>
+<li><a href="http://www.echojs.com/" target="_blank">echojs</a>：快速了解js新资讯的网站</li>
+<li><a href="http://stackoverflow.com/" target="_blank">stackoverflow</a>和segmentfault：基本上各种问题都能在上面获得解答</li>
+<li><a href="https://developers.google.com/web/fundamentals/" target="_blank">google web fundamentals</a>：每篇文章都适合仔细阅读</li>
+<li><a href="http://www.staticfile.org/" target="_blank">static files</a>：开放的CDN，很好用</li>
+<li><a href="http://www.iconfont.cn/" target="_blank">iconfont</a>：阿里的矢量图标库，非常不错，支持CDN而且支持项目</li>
+<li><a href="http://www.html5rocks.com/" target="_blank">html5 rocks</a>: 一个不错的网站，很多浏览器的新特性以及前沿的技术，都能在这上面找到文章</li>
+<li><a href="http://css-tricks.com/" target="_blank">css tricks</a>：如何活用CSS，以及了解CSS新特性，这里可以满足你</li>
+<li><a href="http://bonsaiden.github.io/JavaScript-Garden/zh/#object.general" target="_blank">JavaScript 秘密花园</a> JavaScript初学必看，非常不错</li>
+<li><a href="http://www.w3cplus.com/" target="_blank">w3cplus</a>：一个前端学习的网站，里面的文章质量都挺不错的</li>
+<li><a href="http://nodeschool.io/" target="_blank">node school</a>：一个不错的node学习网站</li>
+<li><a href="http://pcottle.github.io/learnGitBranching/?demo" target="_blank">learn git branch</a>：一个git学习网站，交互很棒</li>
+<li><a href="http://www.html-js.com/" target="_blank">前端乱炖</a>：一个前端文章分享的社区，有很多优秀文章</li>
+<li><a href="http://deerchao.net/tutorials/regex/regex.htm" target="_blank">正则表达式</a>：一个正则表达式入门教程，非常值得一看</li>
+<li><a href="http://www.ruanyifeng.com/blog/" target="_blank">阮一峰的博客</a>和<a href="http://www.zhangxinxu.com/wordpress/" target="_blank">张鑫旭的博客</a>：快速了解某些知识的捷径，但是如果需要深挖，还需要其他的资源</li>
+<li>各路大牛的博客：这个太多了，就不贴了，知乎上有很全的</li>
+<li>各种规范的官方网站，不懂得时候读规范</li>
+</ul><div class="md-section-divider"></div><h4 data-anchor-id="hplw" id="历程">历程</h4><p data-anchor-id="del0">以前是做Java SSH的，半路出家做的前端，所以水平比较弱，遇到问题也比较多。基本上入门靠看书和<a href="http://www.w3school.com.cn/" target="_blank">W3C School</a>上的教程，以及一些前端博客，如<a href="http://www.cnblogs.com/TomXu/" target="_blank">汤姆大叔的博客</a>。以前也只是使用jQuery，原生js也没有太多的钻研，后来逐渐看了很多本动物书，比如老道的语言精粹等等。从这些书中学到了很多语言层面的知识。但这显然是不够的，所以我经常会去社区上看看大家在谈论什么，然后去看看相关的资料，感兴趣就会多找些资料看看，或者写一写demo。学CSS主要就是通过这种方式。后来开始更多的关注各路大牛的博客和一些比较深的书籍，以及关注一些新的知识和框架，并且不断地练手提交代码到github，这样也学到了很多知识。在实习的过程中，切身参与到实际项目开发之中，能学到很多在学校学不到的理念和思维，这点也有很大的帮助。不说了，我要去搬砖求offer了...</p><div class="md-section-divider"></div><h3 data-anchor-id="yo7t" id="zwl4488的学习经历"><a href="https://github.com/zwl4488" target="_blank">zwl4488</a>的学习经历</h3><div class="md-section-divider"></div><h3 data-anchor-id="i96y" id="mrraindrop的学习经历"><a href="https://github.com/MrRaindrop" target="_blank">MrRaindrop</a>的学习经历</h3><p data-anchor-id="nhmp">应<a href="https://github.com/qiu-deqing" target="_blank">qiu神</a>的邀请分享一下前端学习经验，这里对前端知识体系架构就不做总结了，各位大神们的总结已经相当到位了，我就贡献几个个人认为还比较有用的链接大家研究研究就好，然后主要分享一下我在前端学习过程中遇到的问题和总结的经验教训吧，如果能帮到想要入门的FE初学者（我就姑且假定为本文的读者受众类型了），让他们少走点弯路，每走一步都知道自己下一步的方向，这是最好了。各位大神的总结和分享详见qiu神整理的<a href="https://github.com/qiu-deqing/FE-learning" target="_blank">FE-learning</a>。</p><p data-anchor-id="5e7s">先说下，前端这个东西每个人都可以有适合自己的学习方法，这篇仅作参考，写的有点乱，各位凑合看。</p><div class="md-section-divider"></div><h4 data-anchor-id="0y9w" id="缘起">缘起</h4><p data-anchor-id="wydp">我是属于误打误撞进了前端，之前一直往做游戏的方向去来着，搞过游戏网站，玩过游戏引擎，比如unity，unreal这种商业引擎，捣鼓了几个游戏原型，不过自打研一进了实验室，直接就被导师派去写了js，导师给了我半个月时间让我写个基于百度地图api的数据展示页面，虽然这个时间还是相当宽裕的，不过之前没怎么写过js，也不会用地图api，于是我就一边啃着<a href="http://book.douban.com/subject/2228378/" target="_blank">《Javascript权威指南》</a>（犀牛书）一边参考实验室前人留下的“代码”，总算是把功能都写出来了。那个页面算我的js入门作了，也是我前端学习路线的开始。</p><blockquote data-anchor-id="313q" class="white-blockquote">
+  <p>现在想来，虽然指派了去做前端，但是一直做下去并做好还是得靠兴趣维持，当然前端是一个趣味性十足的技术领域，而且社区每天都很“热闹”。</p>
+</blockquote><div class="md-section-divider"></div><h4 data-anchor-id="q2ds" id="项目下一个项目">项目，下一个项目</h4><p data-anchor-id="g52a">我个人认为前端的学习，初学阶段你可以完全脱离开书本，以<strong>项目驱动</strong>。虽然我个人是从犀牛书开始啃的，不过如果你没有充足的时间，或者觉得啃大部头乏而无味的话，还是别像我这样。当然了如果决定啃书最好是把书里的例子都跟着敲一遍的。我上研之前没接触过js，4月份还没开学呢就被直接被导师甩了个百度地图api的项目到脸上，接着就是各种ERP，地图数据展示，虽然换着花样来一点不重样，不过基本上都是前端的活，SSH和android开发也打过酱油，整个实验室就我一个人写前端敢信？富客户端SPA时代的后端就是一个restful接口，代码量基本都在前端啊，写的我一个人怎一个爽字了得...期间跟着导师感受了一把创业，每天从7点搞到晚上10点，也算是经历了一段快速成长期。</p><blockquote data-anchor-id="estm" class="white-blockquote">
+  <p>掌握一门技术先掌握它的大体框架，想一个能实现的点子，做一个能跑就行的demo，再去完善它的细节，等到demo完成了，对这门技术有了一个感性的认识，再去啃书，收获会大很多。我从开始原生js写到jquery，再到extjs，再到angularjs，从导师指定技术，到自己做技术选型，一个项目接着一个项目的练，就跟打怪升级似的。当然没有项目就去自己创造项目，动手实现自己的想法是件有乐趣和成就感的事。</p>
+</blockquote><div class="md-section-divider"></div><h4 data-anchor-id="zrt7" id="收集癖和知识管理">收集癖和知识管理</h4><p data-anchor-id="1a1u">前端学习有个特点，很多东西都很零碎，分散，需要你自己去整理、归纳和总结。在微博、知乎上follow了众多的大神，你不仅仅是为了听八卦，大神们的只言片语有时候留下的是无尽的余味，很有可能一个不经意提到的一个词就成为你下一个学习的目标。<strong>收集这些信息，善用google，提问，思考。</strong>就像游戏里的收集要素，前端学习也是充满搜集要素的一个“游戏”，只不过你需要一个知识管理工具来充当物品栏和仓库，我所知道的大牛们无一不是知识管理工具的重度使用者。以前用的oneNote，那时候还没绑定到云存储，现在基本上用evernote，笔记已经累计到1200+篇。书签一直打算用delicious，因为它是基于tag管理的，但一直没用起来。当然重点不在于这些工具，但是趁手的工具可以提高你的学习效率。最关键当然是随时<strong>保持旺盛的学习欲望</strong>，你的目标是了解有关前端的一切（当然不是所有都要掌握，因为毕竟你的精力有限，而且现实的说这也不太可能）。</p><div class="md-section-divider"></div><h4 data-anchor-id="z8uc" id="跟对神">跟对神</h4><p data-anchor-id="cbkm">这个可控性貌似不大...跟对老大这个就不多说了，一定程度要看造化。不过话说回来，多跟身边的高手交流是王道，这个高手不一定要多高，但是一定要对技术有热情。研一的时候热情高涨，每天7点进实验室门，然后发现有个家伙居然比我还早到。后来发现这家伙上午就走了，下午又来了，而且导师对此习以为常，原来这家伙晚上不睡觉通宵写代码，上午才跑回去睡。后来经常和这位神讨论问题，每次感觉经验值蹭蹭蹭的往上涨。然后实验室还有一位神，被前面这位通宵神形容为“只能望其项背，一直在追赶，从来没赶上”，两位神的特点都是什么都了解一点，所以什么都能跟你讨论得起来，我有段时间做了个读书计划，从c/c++到vc/mfc再到unix网络编程，最后一路看到java核心技术和MSDN上的C#编程指南，和神们也能扯得很high了。</p><blockquote data-anchor-id="1bif" class="white-blockquote">
+  <p>总之就是这两位神把我拉进了坑，或者说从一个坑跳进另一坑，虽然两位神都不是搞前端的，不过技术之间总有相通之处。</p>
+</blockquote><div class="md-section-divider"></div><h4 data-anchor-id="kxgo" id="读书">读书</h4><p data-anchor-id="rwu9">读书，多读书，读好书。在<a href="http://mindhacks.cn/topics/learning-method/" target="_blank">刘未鹏的博客</a>里看到过一个公式，<strong>你第一个月的工资等于之前买过（读过）的技术书价格总和</strong>（这里说的技术书指那些经典的公认的好书）。讨论这个公式的正确性似乎没什么意义，然而它的合理性是毋庸置疑的，那就是多读经典技术书。最极端的一个例子，google的徐宥在<a href="http://blog.youxu.info/2009/08/06/my-undergraduate-year/" target="_blank">我的大学</a>里面说他扫荡了图书馆的整个TP312书架...对于前端的经典书籍，后面列了一个我收集的<a href="http://book.douban.com/doulist/13701898/" target="_blank">前端书列</a>（如果有遗漏的前端经典好书，还请留言告诉我），有条件可以尝试刷一遍这些书，我也是在找完整的时间去啃完它们。之前说的，前端知识点松散，收集零散的知识点，从博客里快速学习等，这些只是前端学习的一个方面，如果你要想深入理解一个知识体系，了解它的来龙去脉，对它建立系统认识，读经典书还是必不可少的。</p><p data-anchor-id="j98e">我从最开始啃完犀牛书，然后接着去看了其他一些和前端干系不大的经典技术书，再后来通过实验室的项目和自己弄的一些小项目逐渐对前端领域比较上路以后，又看了《Javascript模式》、《Javascript设计模式》、《编写可维护的Javascript》，后来了解到node并开始用node搞点小玩意儿，又看了本《NodeJS up and run》和《Mongodb权威指南》，不过感觉前者略坑。那会儿朴灵那本深入浅出（晒书么么哒）还没出，后来出了就去图书馆借来看完，这么看下来感觉还不错，不过感觉看的还是偏少了，还需要继续刷（参照上面的书列）。</p><div class="md-section-divider"></div><h4 data-anchor-id="2q13" id="前端的定位">前端的定位</h4><p data-anchor-id="geo0">前端的定位关乎到你需要吸收什么样的知识和技能，决定在技术世界里你对什么需要格外敏感。如果你认为前端仅仅停留在切页面，实现交互和视觉的要求，那你对前端的认识还停留在初级阶段。阿里终面的时候我问了考官这么个问题：前端技术日新月异，范围越扩越宽，标准越来越丰富，似乎任何一个触角都能伸出很远。怎么给前端一个合适的定位？考官给我分析了半天，然后总结成一句话，就是用户和网站的联结者，用户体验的创造者（原话不是这样，但大体是这个意思）。也就是说前端的终极目标其实就是创造用户体验，提升用户体验，<strong>以用户体验为中心</strong>。不管你是从交互设计上下手，还是从性能优化出发，或者改进工作流提升工作流效率，最终都是为了创造和提升用户体验，最终都要体现到用户体验这一点上来。我认为这个总结非常有道理（当然“用户体验”这个词太宽泛了，并且不仅仅是前端工程师的范畴，比如开发后台的时候对一个数据处理过程进行优化，提升了整体性能，这也是对用户体验的一个提升）。</p><p data-anchor-id="qfoh">现在的前端工程师做到一定阶段不可避免会接触到很多比切页面、实现视觉要求、实现交互等更深入的问题，比如前端自动化、图像编程、性能优化等等，再往后推一点就是PHP/JSP/ASP/nodeJs，过去后端模板一般属于后端的范畴，现在随着<a href="https://github.com/lifesinger/lifesinger.github.com/issues/184" target="_blank">前端架构的演进</a>，可能会让你去写后端模板的代码，需要用到后端语言（PHP/Java/C#等），这就是所谓<strong>大前端</strong>（然而这与前端的定位并不是相背离的，大前端处理的依然是与用户接触的部分，仍然是对用户体验的优化）。可能最常见或者被谈论最多的就是node，其实这几种技术选型都可以，bat三家据说百度用PHP比较多，阿里用node比较多。</p><p data-anchor-id="0ktb">玉伯在<a href="https://github.com/lifesinger/lifesinger.github.com/labels/blog" target="_blank">他的博客</a>里提过所谓全端是横向的，全栈是纵向的。<strong>全端</strong>即所有的终端说白了都是前端，因为都关乎到用户体验，直接和用户接触。适应多终端的开发，要求你在web前端的基础上，可能还要去扩展android开发和ios开发的知识，好在由于hybrid开发方式的流行，对使用native语言开发的技能会要求的不那么深入。</p><p data-anchor-id="jcc0"><strong>全栈</strong>可以说是最适合初创公司的一种发展类型，广义上认为是从前端干到后端，从开发干到运维，这种就不说了，一般人应该不会想要去往这个方向发展，想要成为这种意义上的full-stack dev的，可能用不着来看我这篇文章了；而狭义上的全栈特指使用js语言从前端写到架设在nodeJs上的后端，前后端统一语言，统一编程模型，甚至公用同一套代码。更多了解全栈开发可以看看玉伯这篇<a href="https://github.com/lifesinger/lifesinger.github.com/issues/185" target="_blank">说说全栈工程师</a>。</p><p data-anchor-id="473c">以上是我对前端以及衍生出来的技术路线的一些浅薄理解，学习一个领域掌握它的整体上的走向和趋势还是挺重要的。另外如果想要对前端学习方向、职业成长路径有一个整体的认识，推荐看看拔赤总结的这篇<a href="http://blog.jobbole.com/25114/" target="_blank">前端开发十日谈</a>。</p><div class="md-section-divider"></div><h4 data-anchor-id="hy3g" id="最后">最后</h4><p data-anchor-id="83kf">贡献几个对前端学习、面试有帮助的链接：</p><ul data-anchor-id="2gax">
+<li><a href="https://github.com/darcyclarke/Front-end-Developer-Interview-Questions" target="_blank">前端面试问题合集（Front-end-Developer-Interview-Questions）</a></li>
+<li><a href="https://github.com/JacksonTian/fks" target="_blank">前端技能汇总（JacksonTian）</a></li>
+<li><a href="http://www.f2er.info/" target="_blank">另一张前端技能汇总图</a></li>
+<li><a href="http://book.douban.com/doulist/13701898/" target="_blank">前端那点事儿（书列）</a></li>
+</ul><div class="md-section-divider"></div><h3 data-anchor-id="mump" id="zyr2014的学习经历"><a href="https://github.com/zyr2014" target="_blank">zyr2014</a>的学习经历</h3><div class="md-section-divider"></div><h3 data-anchor-id="cvys" id="zhangtaibai的学习经历"><a href="https://github.com/zhangtaibai" target="_blank">zhangtaibai</a>的学习经历</h3><div class="md-section-divider"></div><h3 data-anchor-id="jbec" id="byr论坛yiyizym的建议">byr论坛yiyizym的建议</h3><p data-anchor-id="pehm">与grunt相比，学习gulp会比较简单</p><p data-anchor-id="hbea">做SPA的话，推荐backbone.js和 backbone.marionette.js</p><p data-anchor-id="ufd0">翻墙不用折腾，花十块钱买一个月的 红杏。 </p><p data-anchor-id="vbfl">把基础打扎实了再学这些都没问题。</p><p data-anchor-id="she7">html 没什么好说的，有空学学html5。  </p><p data-anchor-id="1nyv">css 尽量看<a href="http://www.w3.org/TR/CSS21/cover.html#minitoc" target="_blank">文档</a> ，因为很多中文资料都各执一辞，看多了反而会糊涂。</p><p data-anchor-id="0biu">有个<a href="http://caniuse.com/" target="_blank">网站</a>可以查找html/css标签、属性在各个浏览器中的支持情况，挺好用的。  </p><p data-anchor-id="brpe">javascript 就看 javascript高级程序设计 。不过这么厚的书看过就会忘。对javascript核心概念的讲解：对象/原型链/         构造函数/执行上下文/作用域链/闭包/this，<a href="http://weizhifeng.net/javascript-the-core.html" target="_blank">这里</a>有篇不错的文章。  </p><p data-anchor-id="u9v0">有闲情可以看看 ecmascript 6，计划明年6月就发布啦。<a href="http://es6.ruanyifeng.com/" target="_blank">阮一峰的网站</a>有入门资料。  </p><p data-anchor-id="uwyt">jquery 有很多 API,<a href="http://www.css88.com/jqapi-1.9/" target="_blank">这个网站</a>可以方便查到。有时间弄清楚jquery deferred 的用法。</p><p data-anchor-id="8liv">多给 sublimetext 装插件，比如说检查代码错误的，新建目录文件的，整理代码的。</p></div>
+</body>
+</html>
