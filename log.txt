@@ -1184,3 +1184,4 @@ INFO: loading config from /home/mrwaite/shadowsocks.json
 2017-02-02 22:03:15 WARNING  timed out: mtalk.google.com:5228
 2017-02-02 22:03:15 INFO     connecting mtalk.google.com:5228
 2017-02-02 22:03:52 INFO     connecting www.inoreader.com:443
+2017-02-02 22:07:28 INFO     connecting github.com:443
