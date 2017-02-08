@@ -59,3 +59,111 @@ INFO: loading config from /home/mrwaite/shadowsocks.json
 2017-02-08 13:13:28 INFO     connecting mtalk.google.com:5228
 2017-02-08 13:13:55 INFO     connecting www.inoreader.com:443
 2017-02-08 13:14:13 INFO     connecting 115.29.201.173:80
+2017-02-08 13:16:13 INFO     connecting api.xitu.io:80
+2017-02-08 13:16:13 INFO     connecting api.xitu.io:80
+2017-02-08 13:16:13 INFO     connecting api.xitu.io:80
+2017-02-08 13:16:13 INFO     connecting www.google-analytics.com:443
+2017-02-08 13:16:13 INFO     connecting www.google-analytics.com:443
+2017-02-08 13:16:13 INFO     connecting www.google-analytics.com:443
+2017-02-08 13:16:13 INFO     connecting www.google-analytics.com:443
+2017-02-08 13:16:13 INFO     connecting www.google.com:443
+2017-02-08 13:16:13 INFO     connecting clients5.google.com:443
+2017-02-08 13:16:13 INFO     connecting ssl.gstatic.com:443
+2017-02-08 13:16:13 INFO     connecting www.google.com:443
+2017-02-08 13:16:13 INFO     connecting www.google.com:443
+2017-02-08 13:16:16 INFO     connecting github.com:443
+2017-02-08 13:16:16 ERROR    [Errno 104] Connection reset by peer
+2017-02-08 13:16:16 ERROR    [Errno 104] Connection reset by peer
+2017-02-08 13:16:16 ERROR    [Errno 104] Connection reset by peer
+2017-02-08 13:16:16 ERROR    [Errno 104] Connection reset by peer
+2017-02-08 13:16:16 INFO     connecting api.github.com:443
+2017-02-08 13:16:16 INFO     connecting api.github.com:443
+2017-02-08 13:16:16 INFO     connecting api.github.com:443
+2017-02-08 13:16:16 INFO     connecting api.github.com:443
+2017-02-08 13:16:16 INFO     connecting assets-cdn.github.com:443
+2017-02-08 13:16:16 INFO     connecting assets-cdn.github.com:443
+2017-02-08 13:16:16 INFO     connecting assets-cdn.github.com:443
+2017-02-08 13:16:16 INFO     connecting assets-cdn.github.com:443
+2017-02-08 13:16:16 INFO     connecting assets-cdn.github.com:443
+2017-02-08 13:16:16 ERROR    [Errno 104] Connection reset by peer
+2017-02-08 13:16:16 ERROR    [Errno 104] Connection reset by peer
+2017-02-08 13:16:16 INFO     connecting avatars0.githubusercontent.com:443
+2017-02-08 13:16:16 INFO     connecting avatars0.githubusercontent.com:443
+2017-02-08 13:16:16 INFO     connecting avatars0.githubusercontent.com:443
+2017-02-08 13:16:16 INFO     connecting avatars1.githubusercontent.com:443
+2017-02-08 13:16:16 INFO     connecting avatars1.githubusercontent.com:443
+2017-02-08 13:16:16 INFO     connecting avatars1.githubusercontent.com:443
+2017-02-08 13:16:16 INFO     connecting avatars1.githubusercontent.com:443
+2017-02-08 13:16:16 INFO     connecting avatars2.githubusercontent.com:443
+2017-02-08 13:16:16 INFO     connecting avatars2.githubusercontent.com:443
+2017-02-08 13:16:16 INFO     connecting avatars2.githubusercontent.com:443
+2017-02-08 13:16:16 INFO     connecting collector.githubapp.com:443
+2017-02-08 13:16:16 INFO     connecting collector.githubapp.com:443
+2017-02-08 13:16:16 INFO     connecting collector.githubapp.com:443
+2017-02-08 13:16:16 INFO     connecting github.algolia.com:443
+2017-02-08 13:16:16 INFO     connecting github.com:443
+2017-02-08 13:16:16 INFO     connecting github.com:443
+2017-02-08 13:16:17 ERROR    [Errno 104] Connection reset by peer
+2017-02-08 13:16:17 ERROR    [Errno 104] Connection reset by peer
+2017-02-08 13:16:17 INFO     connecting assets-cdn.github.com:443
+2017-02-08 13:16:17 INFO     connecting assets-cdn.github.com:443
+2017-02-08 13:16:18 INFO     connecting assets-cdn.github.com:443
+2017-02-08 13:16:19 INFO     connecting live.github.com:443
+2017-02-08 13:16:20 INFO     connecting api.github.com:443
+2017-02-08 13:16:22 INFO     connecting live.github.com:443
+2017-02-08 13:16:23 INFO     connecting api.github.com:443
+2017-02-08 13:16:23 INFO     connecting api.github.com:443
+2017-02-08 13:16:23 INFO     connecting clients1.google.com:443
+2017-02-08 13:16:24 ERROR    [Errno 104] Connection reset by peer
+2017-02-08 13:16:49 ERROR    [Errno 104] Connection reset by peer
+2017-02-08 13:16:49 ERROR    [Errno 104] Connection reset by peer
+2017-02-08 13:16:49 ERROR    [Errno 104] Connection reset by peer
+2017-02-08 13:16:49 ERROR    [Errno 104] Connection reset by peer
+2017-02-08 13:16:49 ERROR    [Errno 104] Connection reset by peer
+2017-02-08 13:16:49 ERROR    [Errno 104] Connection reset by peer
+2017-02-08 13:16:49 ERROR    [Errno 104] Connection reset by peer
+2017-02-08 13:16:49 ERROR    [Errno 104] Connection reset by peer
+2017-02-08 13:16:49 ERROR    [Errno 104] Connection reset by peer
+2017-02-08 13:16:49 ERROR    [Errno 104] Connection reset by peer
+2017-02-08 13:16:49 ERROR    [Errno 104] Connection reset by peer
+2017-02-08 13:16:49 ERROR    [Errno 104] Connection reset by peer
+2017-02-08 13:16:49 INFO     connecting github.com:443
+2017-02-08 13:16:49 INFO     connecting api.github.com:443
+2017-02-08 13:16:49 INFO     connecting api.github.com:443
+2017-02-08 13:16:49 INFO     connecting api.github.com:443
+2017-02-08 13:16:49 INFO     connecting assets-cdn.github.com:443
+2017-02-08 13:16:49 INFO     connecting assets-cdn.github.com:443
+2017-02-08 13:16:49 INFO     connecting assets-cdn.github.com:443
+2017-02-08 13:16:49 INFO     connecting assets-cdn.github.com:443
+2017-02-08 13:16:49 INFO     connecting assets-cdn.github.com:443
+2017-02-08 13:16:49 INFO     connecting assets-cdn.github.com:443
+2017-02-08 13:16:49 INFO     connecting avatars0.githubusercontent.com:443
+2017-02-08 13:16:49 INFO     connecting avatars1.githubusercontent.com:443
+2017-02-08 13:16:49 INFO     connecting avatars1.githubusercontent.com:443
+2017-02-08 13:16:49 INFO     connecting avatars2.githubusercontent.com:443
+2017-02-08 13:16:49 INFO     connecting collector.githubapp.com:443
+2017-02-08 13:16:49 INFO     connecting github.com:443
+2017-02-08 13:16:49 INFO     connecting github.com:443
+2017-02-08 13:16:51 INFO     connecting render.githubusercontent.com:443
+2017-02-08 13:16:51 INFO     connecting render.githubusercontent.com:443
+2017-02-08 13:16:52 INFO     connecting live.github.com:443
+2017-02-08 13:16:52 INFO     connecting avatars3.githubusercontent.com:443
+2017-02-08 13:16:52 INFO     connecting render.githubusercontent.com:443
+2017-02-08 13:16:54 INFO     connecting api.github.com:443
+2017-02-08 13:16:54 INFO     connecting api.github.com:443
+2017-02-08 13:16:54 ERROR    [Errno 104] Connection reset by peer
+2017-02-08 13:16:54 INFO     connecting raw.githubusercontent.com:443
+2017-02-08 13:17:29 ERROR    [Errno 104] Connection reset by peer
+2017-02-08 13:17:29 ERROR    [Errno 104] Connection reset by peer
+2017-02-08 13:17:29 ERROR    [Errno 104] Connection reset by peer
+2017-02-08 13:17:29 ERROR    [Errno 104] Connection reset by peer
+2017-02-08 13:17:29 ERROR    [Errno 104] Connection reset by peer
+2017-02-08 13:17:29 ERROR    [Errno 104] Connection reset by peer
+2017-02-08 13:17:29 INFO     connecting beacons.gvt2.com:443
+2017-02-08 13:17:34 INFO     connecting collector.githubapp.com:443
+2017-02-08 13:18:46 INFO     connecting marketplace.visualstudio.com:443
+2017-02-08 13:18:47 INFO     connecting api.digitalparticle.com:80
+2017-02-08 13:18:47 INFO     connecting marketplace.visualstudio.com:443
+2017-02-08 13:18:47 INFO     connecting marketplace.visualstudio.com:443
+2017-02-08 13:18:47 INFO     connecting marketplace.visualstudio.com:443
+2017-02-08 13:21:19 INFO     connecting github.com:443
