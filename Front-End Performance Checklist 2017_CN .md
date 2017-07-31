@@ -61,8 +61,8 @@
 #### 5.  渐进增强
 保持渐进增强作为你前端体系结构的指导原则，那部署就是一个安全的赌注。首先设计和制定核心体验是什么，然后通过一些高级特性为功能强大的浏览器增强用户体验，创造弹性体验感。如果你的网站在比较差的屏幕，浏览器，网络和设备上运行的十分流畅，那在比较好的环境中只会运行更加流畅！
 
-#### 6.  Angular， React， Ember 和 co
-喜欢能支持服务器端渲染的框架。在选择框架之前，确保测试服务器端渲染和客户端渲染在移动端的启动时间（因为改变框架之后， 测试性能问题将是比较困难的一件事）。如果你将要使用一个JavaScript框架，确保你的选择是经过[比较](https://www.youtube.com/watch?v=6I_GwgoGm1w)的和[深思熟虑](https://medium.com/@ZombieCodeKill/choosing-a-javascript-framework-535745d0ab90#.h0r9v08lr)。不同的框架在性能上将会有不同的效果，当然会要求不同的优化策略，所以你必须清楚你将会依赖的框架的所有的细节组成。当构建一个web app， 可以看看 [ PRPL pattern ](https://developers.google.com/web/fundamentals/performance/prpl-pattern/) 和   [application shell architecture](https://developers.google.com/web/updates/2015/11/app-shell).
+#### 6.  Angular， React， Ember 等
+喜欢能支持服务器端渲染的框架。在选择框架之前，确保测试服务器端渲染和客户端渲染在移动端的启动时间（因为改变框架之后， 测试性能问题将是比较困难的一件事）。如果你将要使用一个JavaScript框架，确保你的选择是经过[比较](https://www.youtube.com/watch?v=6I_GwgoGm1w)的和[深思熟虑](https://medium.com/@ZombieCodeKill/choosing-a-javascript-framework-535745d0ab90#.h0r9v08lr)。不同的框架在性能上将会有不同的效果，当然会要求不同的优化策略，所以你必须清楚你将会依赖的框架的所有的细节组成。当构建一个web app， 可以看看 [ PRPL pattern ](https://developers.google.com/web/fundamentals/performance/prpl-pattern/) 和   [application shell architecture](https://developers.google.com/web/updates/2015/11/app-shell).
 
 ![PRPL](https://www.smashingmagazine.com/wp-content/uploads/2016/12/app-build-components_dibweb_c_scalew_1408-opt.png)
 
