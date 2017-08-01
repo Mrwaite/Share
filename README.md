@@ -1,3 +1,3 @@
-## 前言
+## 目标
 
-upload some thing about xiyouant`s thing
+每周一篇文章翻译
