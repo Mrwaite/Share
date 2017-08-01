@@ -1,6 +1,6 @@
 # 前端性能清单 2017
 
-@(By Vitaly Friedman 译 陈威特)[前端, 性能]
+@(By Vitaly Friedman 译 Mrwaite)[前端, 性能]
 
 [原文](https://www.smashingmagazine.com/2016/12/front-end-performance-checklist-2017-pdf-pages/)
 
