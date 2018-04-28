@@ -1,0 +1,882 @@
+INFO: loading config from /home/mrwaite/shadowsocks.json
+2017-03-09 08:00:52 INFO     starting local at 127.0.0.1:1080
+2017-03-09 08:01:01 INFO     connecting clients4.google.com:443
+2017-03-09 08:01:01 INFO     connecting clients4.google.com:443
+2017-03-09 08:01:05 INFO     connecting www.googleapis.com:443
+2017-03-09 08:01:05 INFO     connecting www.googleapis.com:443
+2017-03-09 10:39:58 INFO     connecting marketplace.visualstudio.com:443
+2017-03-09 10:40:00 INFO     connecting marketplace.visualstudio.com:443
+2017-03-09 10:40:00 INFO     connecting marketplace.visualstudio.com:443
+2017-03-09 10:40:00 INFO     connecting marketplace.visualstudio.com:443
+2017-03-09 10:40:02 INFO     connecting api.digitalparticle.com:80
+2017-03-09 10:40:19 INFO     connecting marketplace.visualstudio.com:443
+2017-03-09 10:40:20 INFO     connecting vscode-update.azurewebsites.net:443
+2017-03-09 10:40:20 INFO     connecting api.digitalparticle.com:80
+2017-03-09 10:40:20 INFO     connecting marketplace.visualstudio.com:443
+2017-03-09 10:40:20 INFO     connecting marketplace.visualstudio.com:443
+2017-03-09 10:40:20 INFO     connecting marketplace.visualstudio.com:443
+2017-03-09 16:52:38 ERROR    poll:[Errno 4] Interrupted system call
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/shadowsocks/eventloop.py", line 198, in run
+    events = self.poll(1)
+  File "/usr/lib/python2.7/dist-packages/shadowsocks/eventloop.py", line 175, in poll
+    events = self._impl.poll(timeout)
+  File "/usr/lib/python2.7/dist-packages/shadowsocks/eventloop.py", line 63, in poll
+    return self._epoll.poll(timeout)
+IOError: [Errno 4] Interrupted system call
+2017-03-09 19:12:03 ERROR    poll:[Errno 4] Interrupted system call
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/shadowsocks/eventloop.py", line 198, in run
+    events = self.poll(1)
+  File "/usr/lib/python2.7/dist-packages/shadowsocks/eventloop.py", line 175, in poll
+    events = self._impl.poll(timeout)
+  File "/usr/lib/python2.7/dist-packages/shadowsocks/eventloop.py", line 63, in poll
+    return self._epoll.poll(timeout)
+IOError: [Errno 4] Interrupted system call
+2017-03-09 19:27:07 INFO     connecting clients1.google.com:443
+2017-03-09 19:27:07 INFO     connecting clients1.google.com:443
+2017-03-09 19:27:11 INFO     connecting raw.githubusercontent.com:443
+2017-03-09 19:27:11 INFO     connecting pbs.twimg.com:443
+2017-03-09 19:27:11 INFO     connecting pbs.twimg.com:443
+2017-03-09 19:27:11 INFO     connecting pbs.twimg.com:443
+2017-03-09 19:27:14 INFO     connecting www.google.com.hk:443
+2017-03-09 19:27:14 INFO     connecting www.google.com.hk:443
+2017-03-09 19:27:14 INFO     connecting www.google.com.hk:443
+2017-03-09 19:27:14 INFO     connecting www.google.com.hk:443
+2017-03-09 19:27:15 INFO     connecting www.google.com.hk:443
+2017-03-09 19:27:16 INFO     connecting www.google.com:443
+2017-03-09 19:27:18 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:27:18 INFO     connecting lh3.googleusercontent.com:443
+2017-03-09 19:27:19 INFO     connecting www.gstatic.com:443
+2017-03-09 19:27:20 INFO     connecting clients5.google.com:443
+2017-03-09 19:27:20 INFO     connecting apis.google.com:443
+2017-03-09 19:27:20 INFO     connecting ogs.google.com:443
+2017-03-09 19:27:25 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:27:25 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:27:25 INFO     connecting notifications.google.com:443
+2017-03-09 19:27:26 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:27:26 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:27:26 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:27:26 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:27:26 INFO     connecting fonts.gstatic.com:443
+2017-03-09 19:27:27 INFO     connecting beacons3.gvt2.com:443
+2017-03-09 19:27:27 INFO     connecting beacons3.gvt2.com:443
+2017-03-09 19:27:27 INFO     connecting beacons3.gvt2.com:443
+2017-03-09 19:27:27 INFO     connecting xn--vue-wu9dj99s7gqg8g:80
+2017-03-09 19:27:29 INFO     connecting id.google.com.hk:443
+2017-03-09 19:27:29 INFO     connecting twitter.com:443
+2017-03-09 19:27:39 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:27:39 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:27:39 INFO     connecting beacons5.gvt2.com:443
+2017-03-09 19:27:39 INFO     connecting pbs.twimg.com:443
+2017-03-09 19:27:39 INFO     connecting pbs.twimg.com:443
+2017-03-09 19:27:39 INFO     connecting pbs.twimg.com:443
+2017-03-09 19:27:39 INFO     connecting ssl.gstatic.com:443
+2017-03-09 19:27:41 INFO     connecting github.com:443
+2017-03-09 19:27:42 INFO     connecting avatars1.githubusercontent.com:443
+2017-03-09 19:27:43 INFO     connecting avatars1.githubusercontent.com:443
+2017-03-09 19:27:43 INFO     connecting avatars2.githubusercontent.com:443
+2017-03-09 19:27:43 INFO     connecting avatars2.githubusercontent.com:443
+2017-03-09 19:27:43 INFO     connecting camo.githubusercontent.com:443
+2017-03-09 19:27:43 INFO     connecting camo.githubusercontent.com:443
+2017-03-09 19:27:43 INFO     connecting camo.githubusercontent.com:443
+2017-03-09 19:27:43 INFO     connecting camo.githubusercontent.com:443
+2017-03-09 19:27:43 INFO     connecting avatars1.githubusercontent.com:443
+2017-03-09 19:27:43 INFO     connecting avatars3.githubusercontent.com:443
+2017-03-09 19:27:43 INFO     connecting avatars3.githubusercontent.com:443
+2017-03-09 19:27:44 INFO     connecting github.algolia.com:443
+2017-03-09 19:27:45 INFO     connecting www.imooc.com:80
+2017-03-09 19:27:45 INFO     connecting collector.githubapp.com:443
+2017-03-09 19:27:45 INFO     connecting assets-cdn.github.com:443
+2017-03-09 19:27:45 INFO     connecting live.github.com:443
+2017-03-09 19:27:45 INFO     connecting api.github.com:443
+2017-03-09 19:27:47 INFO     connecting static.mukewang.com:80
+2017-03-09 19:27:48 INFO     connecting api.github.com:443
+2017-03-09 19:27:48 INFO     connecting www.imooc.com:80
+2017-03-09 19:27:48 INFO     connecting www.imooc.com:80
+2017-03-09 19:27:48 INFO     connecting www.imooc.com:80
+2017-03-09 19:27:48 INFO     connecting img.mukewang.com:80
+2017-03-09 19:27:48 INFO     connecting img.mukewang.com:80
+2017-03-09 19:27:48 INFO     connecting static.mukewang.com:80
+2017-03-09 19:27:49 INFO     connecting api.github.com:443
+2017-03-09 19:27:49 INFO     connecting api.github.com:443
+2017-03-09 19:27:52 INFO     connecting static.mukewang.com:80
+2017-03-09 19:27:52 INFO     connecting static.mukewang.com:80
+2017-03-09 19:27:52 INFO     connecting static.mukewang.com:80
+2017-03-09 19:27:52 INFO     connecting static.mukewang.com:80
+2017-03-09 19:27:52 INFO     connecting static.mukewang.com:80
+2017-03-09 19:27:53 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:27:53 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:27:53 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:27:53 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:27:53 INFO     connecting www.inoreader.com:443
+2017-03-09 19:27:55 INFO     connecting beacons.gvt2.com:443
+2017-03-09 19:28:09 INFO     connecting app.yinxiang.com:443
+2017-03-09 19:28:14 INFO     connecting mtalk.google.com:5228
+2017-03-09 19:28:18 INFO     connecting www.google.com.hk:443
+2017-03-09 19:28:30 INFO     connecting google.com:443
+2017-03-09 19:29:12 INFO     connecting beacons4.gvt2.com:443
+2017-03-09 19:29:32 INFO     connecting clients4.google.com:443
+2017-03-09 19:29:53 INFO     connecting www.imooc.com:80
+2017-03-09 19:29:56 INFO     connecting www.imooc.com:80
+2017-03-09 19:29:56 INFO     connecting www.imooc.com:80
+2017-03-09 19:29:56 INFO     connecting www.imooc.com:80
+2017-03-09 19:29:56 INFO     connecting www.imooc.com:80
+2017-03-09 19:29:56 INFO     connecting www.imooc.com:80
+2017-03-09 19:30:00 INFO     connecting img.mukewang.com:80
+2017-03-09 19:30:00 INFO     connecting img.mukewang.com:80
+2017-03-09 19:30:00 INFO     connecting img.mukewang.com:80
+2017-03-09 19:30:00 INFO     connecting img.mukewang.com:80
+2017-03-09 19:30:00 INFO     connecting img.mukewang.com:80
+2017-03-09 19:30:00 INFO     connecting img.mukewang.com:80
+2017-03-09 19:30:19 INFO     connecting mtalk.google.com:5228
+2017-03-09 19:30:55 INFO     connecting maxiang.io:443
+2017-03-09 19:31:38 INFO     connecting 113.142.84.117:80
+2017-03-09 19:32:24 INFO     connecting mtalk.google.com:5228
+2017-03-09 19:32:24 INFO     connecting maxiang.io:443
+2017-03-09 19:32:44 INFO     connecting github.com:443
+2017-03-09 19:32:53 INFO     connecting www.inoreader.com:443
+2017-03-09 19:33:39 INFO     connecting www.google.com.hk:443
+2017-03-09 19:33:47 INFO     connecting clients4.google.com:443
+2017-03-09 19:34:29 INFO     connecting mtalk.google.com:5228
+2017-03-09 19:34:50 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:34:50 INFO     connecting www.google.com.hk:443
+2017-03-09 19:34:54 INFO     connecting maxiang.io:443
+2017-03-09 19:35:24 INFO     connecting maxiang.io:443
+2017-03-09 19:35:53 INFO     connecting 113.142.84.113:80
+2017-03-09 19:35:56 INFO     connecting 222.24.19.190:8080
+2017-03-09 19:36:35 INFO     connecting mtalk.google.com:5228
+2017-03-09 19:36:44 INFO     connecting 222.24.19.190:8080
+2017-03-09 19:37:17 INFO     connecting translate.googleapis.com:443
+2017-03-09 19:37:44 INFO     connecting github.com:443
+2017-03-09 19:37:53 INFO     connecting www.inoreader.com:443
+2017-03-09 19:38:17 INFO     connecting clients4.google.com:443
+2017-03-09 19:38:41 INFO     connecting mtalk.google.com:5228
+2017-03-09 19:39:13 INFO     connecting www.google.com.hk:443
+2017-03-09 19:39:27 INFO     connecting clients4.google.com:443
+2017-03-09 19:39:56 INFO     connecting sub.adtchrome.com:80
+2017-03-09 19:39:56 INFO     connecting sub.adtchrome.com:80
+2017-03-09 19:39:56 INFO     connecting sub.adtchrome.com:80
+2017-03-09 19:40:30 INFO     connecting www.google.com.hk:443
+2017-03-09 19:40:38 INFO     connecting clients1.google.com:443
+2017-03-09 19:40:46 INFO     connecting mtalk.google.com:5228
+2017-03-09 19:40:59 INFO     connecting vuex.vuejs.org:443
+2017-03-09 19:41:01 INFO     connecting fonts.gstatic.com:443
+2017-03-09 19:41:06 INFO     connecting maxiang.io:443
+2017-03-09 19:42:44 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:42:44 INFO     connecting github.com:443
+2017-03-09 19:42:51 INFO     connecting mtalk.google.com:5228
+2017-03-09 19:42:53 INFO     connecting www.inoreader.com:443
+2017-03-09 19:43:11 INFO     connecting app.yinxiang.com:443
+2017-03-09 19:44:29 INFO     connecting api.xitu.io:80
+2017-03-09 19:44:29 INFO     connecting api.xitu.io:80
+2017-03-09 19:44:29 INFO     connecting api.xitu.io:80
+2017-03-09 19:44:29 INFO     connecting images.unsplash.com:443
+2017-03-09 19:44:29 INFO     connecting images.unsplash.com:443
+2017-03-09 19:44:29 INFO     connecting images.unsplash.com:443
+2017-03-09 19:44:29 INFO     connecting images.unsplash.com:443
+2017-03-09 19:44:29 INFO     connecting images.unsplash.com:443
+2017-03-09 19:44:29 INFO     connecting images.unsplash.com:443
+2017-03-09 19:44:30 INFO     connecting www.google.com.hk:443
+2017-03-09 19:44:32 INFO     connecting 115.29.201.173:80
+2017-03-09 19:44:32 INFO     connecting 115.29.201.173:80
+2017-03-09 19:44:32 INFO     connecting 115.29.201.173:80
+2017-03-09 19:44:56 INFO     connecting 115.29.201.173:80
+2017-03-09 19:44:56 INFO     connecting 115.29.201.173:80
+2017-03-09 19:44:56 INFO     connecting mtalk.google.com:5228
+2017-03-09 19:44:57 INFO     connecting 115.29.201.173:80
+2017-03-09 19:44:57 INFO     connecting 115.29.201.173:80
+2017-03-09 19:44:57 INFO     connecting 115.29.201.173:80
+2017-03-09 19:44:57 INFO     connecting 115.29.201.173:80
+2017-03-09 19:45:07 INFO     connecting 115.29.201.173:80
+2017-03-09 19:45:08 INFO     connecting 115.29.201.173:80
+2017-03-09 19:45:10 INFO     connecting 115.29.201.173:80
+2017-03-09 19:45:17 INFO     connecting 115.29.201.173:80
+2017-03-09 19:45:17 INFO     connecting 115.29.201.173:80
+2017-03-09 19:45:17 INFO     connecting 115.29.201.173:80
+2017-03-09 19:45:17 INFO     connecting 115.29.201.173:80
+2017-03-09 19:45:17 INFO     connecting 115.29.201.173:80
+2017-03-09 19:45:18 INFO     connecting 115.29.201.173:80
+2017-03-09 19:45:24 INFO     connecting 115.29.201.173:80
+2017-03-09 19:45:38 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:45:38 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:45:38 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:45:38 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:45:38 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:45:38 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:45:38 INFO     connecting beacons.gvt2.com:443
+2017-03-09 19:45:45 INFO     connecting 115.29.201.173:80
+2017-03-09 19:45:56 INFO     connecting 222.24.19.190:8080
+2017-03-09 19:46:37 INFO     connecting api.xitu.io:80
+2017-03-09 19:46:37 INFO     connecting api.xitu.io:80
+2017-03-09 19:46:37 INFO     connecting api.xitu.io:80
+2017-03-09 19:46:37 INFO     connecting images.unsplash.com:443
+2017-03-09 19:46:37 INFO     connecting images.unsplash.com:443
+2017-03-09 19:46:37 INFO     connecting images.unsplash.com:443
+2017-03-09 19:46:37 INFO     connecting images.unsplash.com:443
+2017-03-09 19:46:39 INFO     connecting clients4.google.com:443
+2017-03-09 19:47:02 INFO     connecting mtalk.google.com:5228
+2017-03-09 19:47:38 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:47:38 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:47:38 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:47:38 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:47:38 INFO     connecting www.google.com.hk:443
+2017-03-09 19:47:44 INFO     connecting github.com:443
+2017-03-09 19:47:53 INFO     connecting www.inoreader.com:443
+2017-03-09 19:48:03 INFO     connecting 115.29.201.173:80
+2017-03-09 19:48:03 INFO     connecting 115.29.201.173:80
+2017-03-09 19:48:03 INFO     connecting 115.29.201.173:80
+2017-03-09 19:48:03 INFO     connecting 115.29.201.173:80
+2017-03-09 19:48:03 INFO     connecting 115.29.201.173:80
+2017-03-09 19:48:59 INFO     connecting mmbiz.qpic.cn:80
+2017-03-09 19:48:59 INFO     connecting mmbiz.qpic.cn:80
+2017-03-09 19:48:59 INFO     connecting mmbiz.qpic.cn:80
+2017-03-09 19:48:59 INFO     connecting mmbiz.qpic.cn:80
+2017-03-09 19:49:07 INFO     connecting mtalk.google.com:5228
+2017-03-09 19:51:05 INFO     connecting api.xitu.io:80
+2017-03-09 19:51:05 INFO     connecting api.xitu.io:80
+2017-03-09 19:51:05 INFO     connecting api.xitu.io:80
+2017-03-09 19:51:06 INFO     connecting www.google.com.hk:443
+2017-03-09 19:51:06 INFO     connecting pbs.twimg.com:443
+2017-03-09 19:51:06 INFO     connecting id.google.com.hk:443
+2017-03-09 19:51:06 INFO     connecting ssl.gstatic.com:443
+2017-03-09 19:51:06 INFO     connecting www.google.com:443
+2017-03-09 19:51:06 INFO     connecting pbs.twimg.com:443
+2017-03-09 19:51:06 INFO     connecting www.gstatic.com:443
+2017-03-09 19:51:06 INFO     connecting images.unsplash.com:443
+2017-03-09 19:51:06 INFO     connecting images.unsplash.com:443
+2017-03-09 19:51:06 INFO     connecting images.unsplash.com:443
+2017-03-09 19:51:06 INFO     connecting images.unsplash.com:443
+2017-03-09 19:51:06 INFO     connecting images.unsplash.com:443
+2017-03-09 19:51:06 INFO     connecting images.unsplash.com:443
+2017-03-09 19:51:06 INFO     connecting www.google.com.hk:443
+2017-03-09 19:51:06 INFO     connecting www.google.com.hk:443
+2017-03-09 19:51:06 INFO     connecting www.google.com.hk:443
+2017-03-09 19:51:06 INFO     connecting www.google.com.hk:443
+2017-03-09 19:51:07 INFO     connecting code.mrwaite.cn:80
+2017-03-09 19:51:07 INFO     connecting cdn.bootcss.com:80
+2017-03-09 19:51:07 INFO     connecting cdn.bootcss.com:80
+2017-03-09 19:51:07 INFO     connecting code.mrwaite.cn:80
+2017-03-09 19:51:07 INFO     connecting code.mrwaite.cn:80
+2017-03-09 19:51:07 INFO     connecting code.mrwaite.cn:80
+2017-03-09 19:51:07 INFO     connecting ojr16of5n.bkt.clouddn.com:80
+2017-03-09 19:51:07 INFO     connecting ojr16of5n.bkt.clouddn.com:80
+2017-03-09 19:51:09 INFO     connecting stats.g.doubleclick.net:443
+2017-03-09 19:51:12 INFO     connecting mtalk.google.com:5228
+2017-03-09 19:51:19 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:51:19 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:51:19 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:51:19 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:51:19 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:51:19 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:51:19 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:51:19 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:51:19 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:51:19 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:51:19 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:51:19 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:51:19 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:51:19 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:51:19 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 19:51:19 INFO     connecting clients4.google.com:443
+2017-03-09 19:51:23 INFO     connecting clients1.google.com:443
+2017-03-09 19:52:07 INFO     connecting www.google.com.hk:443
+2017-03-09 19:52:07 INFO     connecting beacons.gvt2.com:443
+2017-03-09 19:52:07 INFO     connecting beacons5.gvt3.com:443
+2017-03-09 19:52:44 INFO     connecting github.com:443
+2017-03-09 19:52:44 INFO     connecting www.googleapis.com:443
+2017-03-09 19:52:53 INFO     connecting www.inoreader.com:443
+2017-03-09 19:53:18 INFO     connecting mtalk.google.com:5228
+2017-03-09 19:55:23 INFO     connecting mtalk.google.com:5228
+2017-03-09 19:55:35 INFO     connecting maxiang.io:443
+2017-03-09 19:55:56 INFO     connecting 222.24.19.190:8080
+2017-03-09 19:57:28 INFO     connecting mtalk.google.com:5228
+2017-03-09 19:57:44 INFO     connecting github.com:443
+2017-03-09 19:57:53 INFO     connecting www.inoreader.com:443
+2017-03-09 19:58:13 INFO     connecting app.yinxiang.com:443
+2017-03-09 19:59:33 INFO     connecting mtalk.google.com:5228
+2017-03-09 20:00:01 INFO     connecting 61.134.46.28:80
+2017-03-09 20:00:04 INFO     connecting clients4.google.com:443
+2017-03-09 20:00:33 INFO     connecting maxiang.io:443
+2017-03-09 20:00:36 INFO     connecting www.google.com.hk:443
+2017-03-09 20:00:41 INFO     connecting id.google.com.hk:443
+2017-03-09 20:00:51 INFO     connecting clients4.google.com:443
+2017-03-09 20:00:55 INFO     connecting gold.xitu.io:443
+2017-03-09 20:00:55 INFO     connecting gold.xitu.io:443
+2017-03-09 20:00:58 INFO     connecting app-router.leancloud.cn:443
+2017-03-09 20:00:58 INFO     connecting app-router.leancloud.cn:443
+2017-03-09 20:00:58 INFO     connecting app-router.leancloud.cn:443
+2017-03-09 20:00:58 INFO     connecting avatars.githubusercontent.com:443
+2017-03-09 20:00:58 INFO     connecting avatars.githubusercontent.com:443
+2017-03-09 20:00:58 INFO     connecting avatars.githubusercontent.com:443
+2017-03-09 20:00:58 INFO     connecting avatars.githubusercontent.com:443
+2017-03-09 20:00:58 INFO     connecting avatars.githubusercontent.com:443
+2017-03-09 20:00:58 INFO     connecting gold-cdn.xitu.io:443
+2017-03-09 20:00:58 INFO     connecting gold-cdn.xitu.io:443
+2017-03-09 20:00:58 INFO     connecting gold-cdn.xitu.io:443
+2017-03-09 20:00:58 INFO     connecting gold-cdn.xitu.io:443
+2017-03-09 20:00:58 INFO     connecting gold-cdn.xitu.io:443
+2017-03-09 20:00:58 INFO     connecting gold-cdn.xitu.io:443
+2017-03-09 20:00:58 INFO     connecting pbs.twimg.com:443
+2017-03-09 20:00:58 INFO     connecting pbs.twimg.com:443
+2017-03-09 20:00:58 INFO     connecting pbs.twimg.com:443
+2017-03-09 20:00:58 INFO     connecting user-gold-cdn.xitu.io:443
+2017-03-09 20:00:58 INFO     connecting user-gold-cdn.xitu.io:443
+2017-03-09 20:00:58 INFO     connecting user-gold-cdn.xitu.io:443
+2017-03-09 20:00:58 INFO     connecting user-gold-cdn.xitu.io:443
+2017-03-09 20:00:58 INFO     connecting user-gold-cdn.xitu.io:443
+2017-03-09 20:00:58 INFO     connecting juejin.im:443
+2017-03-09 20:01:08 INFO     connecting user-notification-api-ms.juejin.im:443
+2017-03-09 20:01:08 INFO     connecting my-wallet-api-ms.juejin.im:443
+2017-03-09 20:01:08 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 20:01:08 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 20:01:08 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 20:01:08 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 20:01:08 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 20:01:08 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 20:01:08 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 20:01:08 INFO     connecting app-router.leancloud.cn:443
+2017-03-09 20:01:09 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 20:01:09 INFO     connecting ubc-api-ms.juejin.im:443
+2017-03-09 20:01:10 INFO     connecting stats.g.doubleclick.net:443
+2017-03-09 20:01:11 INFO     connecting api.leancloud.cn:443
+2017-03-09 20:01:11 INFO     connecting api.leancloud.cn:443
+2017-03-09 20:01:11 INFO     connecting api.leancloud.cn:443
+2017-03-09 20:01:11 INFO     connecting app-router.leancloud.cn:443
+2017-03-09 20:01:11 INFO     connecting avatars.githubusercontent.com:443
+2017-03-09 20:01:11 INFO     connecting avatars.githubusercontent.com:443
+2017-03-09 20:01:11 INFO     connecting avatars.githubusercontent.com:443
+2017-03-09 20:01:11 INFO     connecting avatars.githubusercontent.com:443
+2017-03-09 20:01:11 INFO     connecting pbs.twimg.com:443
+2017-03-09 20:01:11 INFO     connecting pbs.twimg.com:443
+2017-03-09 20:01:11 INFO     connecting user-gold-cdn.xitu.io:443
+2017-03-09 20:01:13 INFO     connecting api.leancloud.cn:443
+2017-03-09 20:01:13 INFO     connecting api.leancloud.cn:443
+2017-03-09 20:01:14 INFO     connecting api.leancloud.cn:443
+2017-03-09 20:01:15 INFO     connecting api.leancloud.cn:443
+2017-03-09 20:01:16 INFO     connecting api.leancloud.cn:443
+2017-03-09 20:01:22 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 20:01:22 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 20:01:22 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 20:01:22 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 20:01:22 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 20:01:22 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 20:01:22 INFO     connecting api.leancloud.cn:443
+2017-03-09 20:01:22 INFO     connecting api.leancloud.cn:443
+2017-03-09 20:01:22 INFO     connecting api.leancloud.cn:443
+2017-03-09 20:01:22 INFO     connecting api.leancloud.cn:443
+2017-03-09 20:01:22 INFO     connecting api.leancloud.cn:443
+2017-03-09 20:01:22 INFO     connecting gold-cdn.xitu.io:443
+2017-03-09 20:01:22 INFO     connecting gold-cdn.xitu.io:443
+2017-03-09 20:01:22 INFO     connecting gold-cdn.xitu.io:443
+2017-03-09 20:01:22 INFO     connecting my-wallet-api-ms.juejin.im:443
+2017-03-09 20:01:22 INFO     connecting my-wallet-api-ms.juejin.im:443
+2017-03-09 20:01:22 INFO     connecting my-wallet-api-ms.juejin.im:443
+2017-03-09 20:01:22 INFO     connecting pbs.twimg.com:443
+2017-03-09 20:01:22 INFO     connecting pbs.twimg.com:443
+2017-03-09 20:01:22 INFO     connecting ubc-api-ms.juejin.im:443
+2017-03-09 20:01:22 INFO     connecting ubc-api-ms.juejin.im:443
+2017-03-09 20:01:22 INFO     connecting ubc-api-ms.juejin.im:443
+2017-03-09 20:01:22 INFO     connecting user-gold-cdn.xitu.io:443
+2017-03-09 20:01:22 INFO     connecting user-gold-cdn.xitu.io:443
+2017-03-09 20:01:22 INFO     connecting user-notification-api-ms.juejin.im:443
+2017-03-09 20:01:22 INFO     connecting user-notification-api-ms.juejin.im:443
+2017-03-09 20:01:22 INFO     connecting user-notification-api-ms.juejin.im:443
+2017-03-09 20:01:23 INFO     connecting api.leancloud.cn:443
+2017-03-09 20:01:23 INFO     connecting api.leancloud.cn:443
+2017-03-09 20:01:24 INFO     connecting api.leancloud.cn:443
+2017-03-09 20:01:27 INFO     connecting api.leancloud.cn:443
+2017-03-09 20:01:28 INFO     connecting api.leancloud.cn:443
+2017-03-09 20:01:29 INFO     connecting ssl.gstatic.com:443
+2017-03-09 20:01:30 INFO     connecting collection-set-ms.juejin.im:443
+2017-03-09 20:01:30 INFO     connecting api.leancloud.cn:443
+2017-03-09 20:01:33 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 20:01:33 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 20:01:33 INFO     connecting collection-set-ms.juejin.im:443
+2017-03-09 20:01:38 INFO     connecting pbs.twimg.com:443
+2017-03-09 20:01:38 INFO     connecting pbs.twimg.com:443
+2017-03-09 20:01:39 INFO     connecting www.google.com.hk:443
+2017-03-09 20:01:39 INFO     connecting mtalk.google.com:5228
+2017-03-09 20:01:40 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 20:01:40 INFO     connecting cookie.pingxx.com:443
+2017-03-09 20:01:40 INFO     connecting cookie.pingxx.com:443
+2017-03-09 20:01:43 INFO     connecting google.com.hk:443
+2017-03-09 20:02:44 INFO     connecting github.com:443
+2017-03-09 20:02:53 INFO     connecting www.inoreader.com:443
+2017-03-09 20:03:13 INFO     connecting clients1.google.com:443
+2017-03-09 20:03:44 INFO     connecting mtalk.google.com:5228
+2017-03-09 20:03:52 INFO     connecting 113.142.84.111:80
+2017-03-09 20:05:38 INFO     connecting maxiang.io:443
+2017-03-09 20:05:41 INFO     connecting maxiang.io:443
+2017-03-09 20:05:49 INFO     connecting mtalk.google.com:5228
+2017-03-09 20:05:56 INFO     connecting 222.24.19.190:8080
+2017-03-09 20:06:17 INFO     connecting www.google.com.hk:443
+2017-03-09 20:06:28 INFO     connecting clients4.google.com:443
+2017-03-09 20:07:05 INFO     connecting 115.29.201.173:80
+2017-03-09 20:07:44 INFO     connecting github.com:443
+2017-03-09 20:07:53 INFO     connecting www.inoreader.com:443
+2017-03-09 20:07:54 INFO     connecting mtalk.google.com:5228
+2017-03-09 20:07:59 INFO     connecting api.xitu.io:80
+2017-03-09 20:07:59 INFO     connecting api.xitu.io:80
+2017-03-09 20:07:59 INFO     connecting api.xitu.io:80
+2017-03-09 20:08:00 INFO     connecting www.google.com:443
+2017-03-09 20:08:00 INFO     connecting www.gstatic.com:443
+2017-03-09 20:08:00 INFO     connecting images.unsplash.com:443
+2017-03-09 20:08:00 INFO     connecting images.unsplash.com:443
+2017-03-09 20:08:00 INFO     connecting images.unsplash.com:443
+2017-03-09 20:08:00 INFO     connecting images.unsplash.com:443
+2017-03-09 20:08:00 INFO     connecting images.unsplash.com:443
+2017-03-09 20:08:00 INFO     connecting images.unsplash.com:443
+2017-03-09 20:08:00 INFO     connecting stats.g.doubleclick.net:443
+2017-03-09 20:08:09 INFO     connecting pbs.twimg.com:443
+2017-03-09 20:08:09 INFO     connecting pbs.twimg.com:443
+2017-03-09 20:08:12 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 20:08:12 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 20:08:12 INFO     connecting cookie.pingxx.com:443
+2017-03-09 20:08:12 INFO     connecting cookie.pingxx.com:443
+2017-03-09 20:08:30 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 20:08:30 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 20:08:30 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 20:08:33 INFO     connecting mtalk.google.com:5228
+2017-03-09 21:17:10 ERROR    poll:[Errno 4] Interrupted system call
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/shadowsocks/eventloop.py", line 198, in run
+    events = self.poll(1)
+  File "/usr/lib/python2.7/dist-packages/shadowsocks/eventloop.py", line 175, in poll
+    events = self._impl.poll(timeout)
+  File "/usr/lib/python2.7/dist-packages/shadowsocks/eventloop.py", line 63, in poll
+    return self._epoll.poll(timeout)
+IOError: [Errno 4] Interrupted system call
+2017-03-09 21:17:11 WARNING  timed out
+2017-03-09 21:17:16 INFO     connecting clients4.google.com:443
+2017-03-09 21:17:16 INFO     connecting mtalk.google.com:443
+2017-03-09 21:17:16 INFO     connecting github.com:443
+2017-03-09 21:17:16 INFO     connecting www.google.com:443
+2017-03-09 21:17:16 INFO     connecting clients4.google.com:443
+2017-03-09 21:17:16 INFO     connecting github.com:443
+2017-03-09 21:17:16 INFO     connecting www.google.com:443
+2017-03-09 21:17:31 INFO     connecting www.google.com.hk:443
+2017-03-09 21:17:31 INFO     connecting www.google.com.hk:443
+2017-03-09 21:17:31 INFO     connecting beacons.gvt2.com:443
+2017-03-09 21:17:31 INFO     connecting beacons.gvt2.com:443
+2017-03-09 21:17:31 INFO     connecting beacons2.gvt2.com:443
+2017-03-09 21:17:31 INFO     connecting beacons2.gvt2.com:443
+2017-03-09 21:17:31 INFO     connecting beacons3.gvt2.com:443
+2017-03-09 21:17:31 INFO     connecting beacons3.gvt2.com:443
+2017-03-09 21:17:31 INFO     connecting beacons4.gvt2.com:443
+2017-03-09 21:17:31 INFO     connecting beacons4.gvt2.com:443
+2017-03-09 21:17:31 INFO     connecting beacons5.gvt2.com:443
+2017-03-09 21:17:31 INFO     connecting beacons5.gvt2.com:443
+2017-03-09 21:17:31 INFO     connecting beacons5.gvt3.com:443
+2017-03-09 21:17:31 INFO     connecting beacons5.gvt3.com:443
+2017-03-09 21:17:31 INFO     connecting clients2.google.com:443
+2017-03-09 21:17:31 INFO     connecting clients2.google.com:443
+2017-03-09 21:18:00 INFO     connecting www.googleapis.com:443
+2017-03-09 21:18:00 INFO     connecting mtalk.google.com:5228
+2017-03-09 21:18:00 INFO     connecting www.googleapis.com:443
+2017-03-09 21:18:02 INFO     connecting mtalk.google.com:443
+2017-03-09 21:18:02 INFO     connecting www.google.com:443
+2017-03-09 21:18:02 INFO     connecting www.google.com:443
+2017-03-09 21:18:17 INFO     connecting beacons.gvt2.com:443
+2017-03-09 21:18:17 INFO     connecting google.com:443
+2017-03-09 21:18:17 INFO     connecting beacons.gvt2.com:443
+2017-03-09 21:18:17 INFO     connecting google.com:443
+2017-03-09 21:18:17 INFO     connecting beacons2.gvt2.com:443
+2017-03-09 21:18:17 INFO     connecting beacons2.gvt2.com:443
+2017-03-09 21:18:17 INFO     connecting beacons.gvt2.com:443
+2017-03-09 21:18:17 INFO     connecting beacons.gvt2.com:443
+2017-03-09 21:18:17 INFO     connecting beacons3.gvt2.com:443
+2017-03-09 21:18:17 INFO     connecting beacons3.gvt2.com:443
+2017-03-09 21:18:17 INFO     connecting beacons2.gvt2.com:443
+2017-03-09 21:18:17 INFO     connecting beacons2.gvt2.com:443
+2017-03-09 21:18:17 INFO     connecting beacons4.gvt2.com:443
+2017-03-09 21:18:17 INFO     connecting beacons4.gvt2.com:443
+2017-03-09 21:18:17 INFO     connecting beacons3.gvt2.com:443
+2017-03-09 21:18:17 INFO     connecting beacons3.gvt2.com:443
+2017-03-09 21:18:17 INFO     connecting beacons5.gvt2.com:443
+2017-03-09 21:18:17 INFO     connecting beacons5.gvt2.com:443
+2017-03-09 21:18:17 INFO     connecting beacons4.gvt2.com:443
+2017-03-09 21:18:17 INFO     connecting beacons4.gvt2.com:443
+2017-03-09 21:18:17 INFO     connecting beacons5.gvt3.com:443
+2017-03-09 21:18:17 INFO     connecting beacons5.gvt3.com:443
+2017-03-09 21:18:17 INFO     connecting beacons5.gvt2.com:443
+2017-03-09 21:18:17 INFO     connecting beacons5.gvt2.com:443
+2017-03-09 21:18:17 INFO     connecting clients2.google.com:443
+2017-03-09 21:18:17 INFO     connecting clients2.google.com:443
+2017-03-09 21:18:17 INFO     connecting beacons5.gvt3.com:443
+2017-03-09 21:18:17 INFO     connecting beacons5.gvt3.com:443
+2017-03-09 21:18:41 INFO     connecting clients2.google.com:443
+2017-03-09 21:18:41 INFO     connecting www.google.com.hk:443
+2017-03-09 21:18:41 INFO     connecting clients2.google.com:443
+2017-03-09 21:18:41 INFO     connecting www.google.com.hk:443
+2017-03-09 21:18:46 INFO     connecting www.googleapis.com:443
+2017-03-09 21:18:46 INFO     connecting mtalk.google.com:5228
+2017-03-09 21:18:46 INFO     connecting www.googleapis.com:443
+2017-03-09 21:18:46 INFO     connecting beacons5.gvt2.com:443
+2017-03-09 21:18:46 INFO     connecting beacons5.gvt2.com:443
+2017-03-09 21:18:48 INFO     connecting clients4.google.com:443
+2017-03-09 21:18:48 INFO     connecting www.google.com:443
+2017-03-09 21:18:48 INFO     connecting mtalk.google.com:443
+2017-03-09 21:18:48 INFO     connecting clients4.google.com:443
+2017-03-09 21:18:48 INFO     connecting www.google.com:443
+2017-03-09 21:18:48 INFO     connecting beacons5.gvt3.com:443
+2017-03-09 21:18:48 INFO     connecting beacons5.gvt3.com:443
+2017-03-09 21:18:58 INFO     connecting clients2.google.com:443
+2017-03-09 21:18:58 INFO     connecting clients2.google.com:443
+2017-03-09 21:19:15 INFO     connecting clients1.google.com:443
+2017-03-09 21:19:15 INFO     connecting clients1.google.com:443
+2017-03-09 21:19:15 INFO     connecting beacons.gvt2.com:443
+2017-03-09 21:19:15 INFO     connecting beacons.gvt2.com:443
+2017-03-09 21:19:16 INFO     connecting clients1.google.com:443
+2017-03-09 21:19:16 INFO     connecting clients1.google.com:443
+2017-03-09 21:19:16 INFO     connecting beacons2.gvt2.com:443
+2017-03-09 21:19:16 INFO     connecting beacons2.gvt2.com:443
+2017-03-09 21:19:18 INFO     connecting clients1.google.com:443
+2017-03-09 21:19:18 INFO     connecting clients1.google.com:443
+2017-03-09 21:19:18 INFO     connecting beacons3.gvt2.com:443
+2017-03-09 21:19:18 INFO     connecting beacons3.gvt2.com:443
+2017-03-09 21:19:21 INFO     connecting clients1.google.com:443
+2017-03-09 21:19:21 INFO     connecting clients1.google.com:443
+2017-03-09 21:19:21 INFO     connecting beacons4.gvt2.com:443
+2017-03-09 21:19:21 INFO     connecting beacons4.gvt2.com:443
+2017-03-09 21:19:28 INFO     connecting clients1.google.com:443
+2017-03-09 21:19:28 INFO     connecting clients1.google.com:443
+2017-03-09 21:19:28 INFO     connecting beacons3.gvt2.com:443
+2017-03-09 21:19:28 INFO     connecting beacons5.gvt2.com:443
+2017-03-09 21:19:28 INFO     connecting beacons3.gvt2.com:443
+2017-03-09 21:19:28 INFO     connecting beacons5.gvt2.com:443
+2017-03-09 21:19:28 INFO     connecting beacons4.gvt2.com:443
+2017-03-09 21:19:28 INFO     connecting beacons4.gvt2.com:443
+2017-03-09 21:19:28 INFO     connecting beacons5.gvt3.com:443
+2017-03-09 21:19:28 INFO     connecting beacons5.gvt3.com:443
+2017-03-09 21:19:32 INFO     connecting www.googleapis.com:443
+2017-03-09 21:19:32 INFO     connecting mtalk.google.com:5228
+2017-03-09 21:19:32 INFO     connecting www.googleapis.com:443
+2017-03-09 21:19:32 INFO     connecting clients2.google.com:443
+2017-03-09 21:19:32 INFO     connecting clients2.google.com:443
+2017-03-09 21:19:35 INFO     connecting www.google.com:443
+2017-03-09 21:19:35 INFO     connecting mtalk.google.com:443
+2017-03-09 21:19:35 INFO     connecting www.google.com:443
+2017-03-09 21:19:39 INFO     connecting clients2.google.com:443
+2017-03-09 21:19:39 INFO     connecting clients2.google.com:443
+2017-03-09 21:19:43 INFO     connecting clients1.google.com:443
+2017-03-09 21:19:43 INFO     connecting clients1.google.com:443
+2017-03-09 21:20:06 INFO     connecting clients1.google.com:443
+2017-03-09 21:20:06 INFO     connecting clients1.google.com:443
+2017-03-09 21:20:20 INFO     connecting mtalk.google.com:5228
+2017-03-09 21:20:20 INFO     connecting www.google.com:443
+2017-03-09 21:20:20 INFO     connecting www.googleapis.com:443
+2017-03-09 21:20:21 INFO     connecting 211.137.133.5:80
+2017-03-09 21:20:21 INFO     connecting beacons3.gvt2.com:443
+2017-03-09 21:20:21 INFO     connecting clients4.google.com:443
+2017-03-09 21:20:36 INFO     connecting clients1.google.com:443
+2017-03-09 21:20:38 INFO     connecting api.xitu.io:80
+2017-03-09 21:20:38 INFO     connecting api.xitu.io:80
+2017-03-09 21:20:38 INFO     connecting api.xitu.io:80
+2017-03-09 21:20:38 INFO     connecting www.google.com.hk:443
+2017-03-09 21:20:38 INFO     connecting www.gstatic.com:443
+2017-03-09 21:20:38 INFO     connecting images.unsplash.com:443
+2017-03-09 21:20:38 INFO     connecting images.unsplash.com:443
+2017-03-09 21:20:38 INFO     connecting images.unsplash.com:443
+2017-03-09 21:20:38 INFO     connecting images.unsplash.com:443
+2017-03-09 21:20:38 INFO     connecting images.unsplash.com:443
+2017-03-09 21:20:38 INFO     connecting images.unsplash.com:443
+2017-03-09 21:20:38 INFO     connecting www.google.com.hk:443
+2017-03-09 21:20:38 INFO     connecting www.google.com.hk:443
+2017-03-09 21:20:39 INFO     connecting www.google.com.hk:443
+2017-03-09 21:20:39 INFO     connecting www.google.com.hk:443
+2017-03-09 21:20:39 INFO     connecting www.google.com.hk:443
+2017-03-09 21:20:40 INFO     connecting www.acfun.tv:80
+2017-03-09 21:20:40 INFO     connecting www.acfun.tv:80
+2017-03-09 21:20:42 INFO     connecting clients4.google.com:443
+2017-03-09 21:20:50 INFO     connecting www.google.com.hk:443
+2017-03-09 21:20:51 INFO     connecting beacons4.gvt2.com:443
+2017-03-09 21:21:20 INFO     connecting mtalk.google.com:5228
+2017-03-09 21:21:32 INFO     connecting clients4.google.com:443
+2017-03-09 21:21:32 INFO     connecting mtalk.google.com:443
+2017-03-09 21:21:32 INFO     connecting clients4.google.com:443
+2017-03-09 21:21:32 INFO     connecting clients2.google.com:443
+2017-03-09 21:21:32 INFO     connecting clients2.google.com:443
+2017-03-09 21:21:32 INFO     connecting clients4.google.com:443
+2017-03-09 21:21:32 INFO     connecting clients2.google.com:443
+2017-03-09 21:21:32 INFO     connecting clients4.google.com:443
+2017-03-09 21:21:32 INFO     connecting clients2.google.com:443
+2017-03-09 21:21:34 INFO     connecting clients4.google.com:443
+2017-03-09 21:21:34 INFO     connecting clients4.google.com:443
+2017-03-09 21:21:34 INFO     connecting mtalk.google.com:5228
+2017-03-09 21:21:34 INFO     connecting www.google.com:443
+2017-03-09 21:21:34 INFO     connecting clients4.google.com:443
+2017-03-09 21:21:34 INFO     connecting clients4.google.com:443
+2017-03-09 21:21:34 INFO     connecting www.google.com:443
+2017-03-09 21:21:36 INFO     connecting clients1.google.com:443
+2017-03-09 21:21:36 INFO     connecting clients1.google.com:443
+2017-03-09 21:21:41 INFO     connecting clients2.google.com:443
+2017-03-09 21:21:41 INFO     connecting clients2.google.com:443
+2017-03-09 21:22:06 INFO     connecting clients1.google.com:443
+2017-03-09 21:22:06 INFO     connecting clients1.google.com:443
+2017-03-09 21:22:15 INFO     connecting google.com:443
+2017-03-09 21:22:15 INFO     connecting google.com:443
+2017-03-09 21:22:15 INFO     connecting clients2.google.com:443
+2017-03-09 21:22:15 INFO     connecting clients2.google.com:443
+2017-03-09 21:22:21 INFO     connecting mtalk.google.com:443
+2017-03-09 21:22:21 INFO     connecting www.google.com:443
+2017-03-09 21:22:21 INFO     connecting clients4.google.com:443
+2017-03-09 21:22:21 INFO     connecting www.google.com:443
+2017-03-09 21:22:21 INFO     connecting clients4.google.com:443
+2017-03-09 21:22:21 INFO     connecting clients4.google.com:443
+2017-03-09 21:22:21 INFO     connecting clients4.google.com:443
+2017-03-09 21:22:24 INFO     connecting clients4.google.com:443
+2017-03-09 21:22:24 INFO     connecting www.google.com:443
+2017-03-09 21:22:24 INFO     connecting mtalk.google.com:5228
+2017-03-09 21:22:24 INFO     connecting clients4.google.com:443
+2017-03-09 21:22:24 INFO     connecting www.google.com:443
+2017-03-09 21:22:36 INFO     connecting clients1.google.com:443
+2017-03-09 21:22:36 INFO     connecting clients1.google.com:443
+2017-03-09 21:22:41 INFO     connecting clients4.google.com:443
+2017-03-09 21:22:41 INFO     connecting mtalk.google.com:443
+2017-03-09 21:22:41 INFO     connecting www.google.com:443
+2017-03-09 21:22:41 INFO     connecting clients4.google.com:443
+2017-03-09 21:22:41 INFO     connecting www.google.com:443
+2017-03-09 21:22:41 INFO     connecting clients4.google.com:443
+2017-03-09 21:22:41 INFO     connecting clients4.google.com:443
+2017-03-09 21:22:41 INFO     connecting clients4.google.com:443
+2017-03-09 21:22:41 INFO     connecting clients4.google.com:443
+2017-03-09 21:22:45 ERROR    [Errno 22] Invalid argument
+2017-03-09 21:22:45 ERROR    [Errno 22] Invalid argument
+2017-03-09 21:22:45 ERROR    [Errno 22] Invalid argument
+2017-03-09 21:22:49 INFO     connecting mtalk.google.com:5228
+2017-03-09 21:22:49 INFO     connecting www.google.com:443
+2017-03-09 21:22:49 INFO     connecting clients4.google.com:443
+2017-03-09 21:23:06 INFO     connecting clients1.google.com:443
+2017-03-09 21:23:23 INFO     connecting clients5.google.com:443
+2017-03-09 21:23:23 INFO     connecting notifications.google.com:443
+2017-03-09 21:24:23 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 21:24:23 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 21:24:23 INFO     connecting clients5.google.com:443
+2017-03-09 21:24:23 INFO     connecting notifications.google.com:443
+2017-03-09 21:24:26 INFO     connecting ogs.google.com:443
+2017-03-09 21:26:32 INFO     connecting www.google.com:443
+2017-03-09 21:26:32 INFO     connecting www.google.com:443
+2017-03-09 21:26:32 INFO     connecting www.google.com:443
+2017-03-09 21:26:32 INFO     connecting www.google.com:443
+2017-03-09 21:26:32 INFO     connecting www.google.com:443
+2017-03-09 21:26:35 INFO     connecting www.google.com:443
+2017-03-09 21:26:37 INFO     connecting clients5.google.com:443
+2017-03-09 21:26:41 INFO     connecting clients1.google.com:443
+2017-03-09 21:31:01 INFO     connecting clients4.google.com:443
+2017-03-09 21:31:28 INFO     connecting clients4.google.com:443
+2017-03-09 21:32:04 INFO     connecting mtalk.google.com:5228
+2017-03-09 21:32:15 INFO     connecting www.google.com:443
+2017-03-09 21:34:10 INFO     connecting mtalk.google.com:5228
+2017-03-09 21:36:14 INFO     connecting mtalk.google.com:5228
+2017-03-09 21:38:19 INFO     connecting mtalk.google.com:5228
+2017-03-09 21:38:45 INFO     connecting www.google.com:443
+2017-03-09 21:38:45 INFO     connecting www.google.com:443
+2017-03-09 21:38:45 INFO     connecting www.google.com:443
+2017-03-09 21:38:48 INFO     connecting clients5.google.com:443
+2017-03-09 21:38:49 INFO     connecting ogs.google.com:443
+2017-03-09 21:38:53 INFO     connecting notifications.google.com:443
+2017-03-09 21:38:55 INFO     connecting id.google.com:443
+2017-03-09 21:38:55 INFO     connecting play.google.com:443
+2017-03-09 21:38:55 INFO     connecting apis.google.com:443
+2017-03-09 21:39:04 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 21:39:04 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 21:39:04 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 21:39:04 INFO     connecting clients4.google.com:443
+2017-03-09 21:40:25 INFO     connecting mtalk.google.com:5228
+2017-03-09 21:42:12 INFO     connecting www.google.com:443
+2017-03-09 21:42:25 INFO     connecting clients4.google.com:443
+2017-03-09 21:42:30 INFO     connecting mtalk.google.com:5228
+2017-03-09 21:43:56 INFO     connecting play.google.com:443
+2017-03-09 21:43:57 INFO     connecting notifications.google.com:443
+2017-03-09 21:44:35 INFO     connecting mtalk.google.com:5228
+2017-03-09 21:46:40 INFO     connecting mtalk.google.com:5228
+2017-03-09 21:47:06 INFO     connecting clients4.google.com:443
+2017-03-09 21:48:45 INFO     connecting mtalk.google.com:5228
+2017-03-09 21:50:50 INFO     connecting mtalk.google.com:5228
+2017-03-09 21:52:55 INFO     connecting mtalk.google.com:5228
+2017-03-09 21:54:12 INFO     connecting www.google.com:443
+2017-03-09 21:54:14 INFO     connecting clients1.google.com:443
+2017-03-09 21:54:18 INFO     connecting clients4.google.com:443
+2017-03-09 21:54:26 INFO     connecting clients4.google.com:443
+2017-03-09 21:55:00 INFO     connecting mtalk.google.com:5228
+2017-03-09 21:57:05 INFO     connecting mtalk.google.com:5228
+2017-03-09 21:57:09 INFO     connecting clients1.google.com:443
+2017-03-09 21:57:39 INFO     connecting www.google.com:443
+2017-03-09 21:57:39 INFO     connecting www.google.com:443
+2017-03-09 21:57:39 INFO     connecting www.google.com:443
+2017-03-09 21:57:39 INFO     connecting www.google.com:443
+2017-03-09 21:57:39 INFO     connecting www.google.com:443
+2017-03-09 21:57:39 INFO     connecting www.google.com:443
+2017-03-09 21:57:46 INFO     connecting clients5.google.com:443
+2017-03-09 21:57:47 INFO     connecting ogs.google.com:443
+2017-03-09 21:58:48 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 21:58:48 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 21:58:48 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 21:58:48 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 21:58:48 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 21:58:48 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 21:58:48 INFO     connecting google.com:443
+2017-03-09 21:59:10 INFO     connecting mtalk.google.com:5228
+2017-03-09 22:01:00 INFO     connecting notifications.google.com:443
+2017-03-09 22:01:15 INFO     connecting mtalk.google.com:5228
+2017-03-09 22:03:21 INFO     connecting mtalk.google.com:5228
+2017-03-09 22:03:37 INFO     connecting clients4.google.com:443
+2017-03-09 22:05:26 INFO     connecting mtalk.google.com:5228
+2017-03-09 22:07:31 INFO     connecting mtalk.google.com:5228
+2017-03-09 22:09:36 INFO     connecting mtalk.google.com:5228
+2017-03-09 22:11:41 INFO     connecting mtalk.google.com:5228
+2017-03-09 22:12:05 INFO     connecting clients4.google.com:443
+2017-03-09 22:13:46 INFO     connecting mtalk.google.com:5228
+2017-03-09 22:13:57 INFO     connecting play.google.com:443
+2017-03-09 22:15:46 INFO     connecting www.google.com:443
+2017-03-09 22:15:46 INFO     connecting www.google.com:443
+2017-03-09 22:15:46 INFO     connecting www.google.com:443
+2017-03-09 22:15:46 INFO     connecting www.google.com:443
+2017-03-09 22:15:46 INFO     connecting www.google.com:443
+2017-03-09 22:15:49 INFO     connecting clients5.google.com:443
+2017-03-09 22:15:50 INFO     connecting ogs.google.com:443
+2017-03-09 22:15:51 INFO     connecting mtalk.google.com:5228
+2017-03-09 22:15:55 INFO     connecting notifications.google.com:443
+2017-03-09 22:15:55 INFO     connecting apis.google.com:443
+2017-03-09 22:15:55 INFO     connecting play.google.com:443
+2017-03-09 22:16:05 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:16:05 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:16:05 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:16:05 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:16:05 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:16:05 INFO     connecting id.google.com:443
+2017-03-09 22:16:13 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:16:13 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:16:13 INFO     connecting notifications.google.com:443
+2017-03-09 22:16:14 INFO     connecting clients4.google.com:443
+2017-03-09 22:17:17 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:17:17 INFO     connecting google.com:443
+2017-03-09 22:17:56 INFO     connecting mtalk.google.com:5228
+2017-03-09 22:20:01 INFO     connecting mtalk.google.com:5228
+2017-03-09 22:20:23 INFO     connecting clients2.google.com:443
+2017-03-09 22:20:57 INFO     connecting play.google.com:443
+2017-03-09 22:21:01 INFO     connecting notifications.google.com:443
+2017-03-09 22:22:05 INFO     connecting google.com:443
+2017-03-09 22:22:07 INFO     connecting mtalk.google.com:5228
+2017-03-09 22:22:29 INFO     connecting www.google.com:443
+2017-03-09 22:22:29 INFO     connecting www.google.com:443
+2017-03-09 22:22:30 INFO     connecting www.google.com:443
+2017-03-09 22:22:32 INFO     connecting clients5.google.com:443
+2017-03-09 22:22:33 INFO     connecting ogs.google.com:443
+2017-03-09 22:22:38 INFO     connecting apis.google.com:443
+2017-03-09 22:22:38 INFO     connecting play.google.com:443
+2017-03-09 22:22:49 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:22:49 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:22:49 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:22:49 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:22:49 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:22:49 INFO     connecting clients4.google.com:443
+2017-03-09 22:23:38 INFO     connecting clients5.google.com:443
+2017-03-09 22:23:43 INFO     connecting apis.google.com:443
+2017-03-09 22:23:43 INFO     connecting play.google.com:443
+2017-03-09 22:24:12 INFO     connecting mtalk.google.com:5228
+2017-03-09 22:26:17 INFO     connecting mtalk.google.com:5228
+2017-03-09 22:28:22 INFO     connecting mtalk.google.com:5228
+2017-03-09 22:28:46 INFO     connecting play.google.com:443
+2017-03-09 22:28:46 INFO     connecting notifications.google.com:443
+2017-03-09 22:30:13 INFO     connecting www.google.com:443
+2017-03-09 22:30:25 INFO     connecting clients4.google.com:443
+2017-03-09 22:30:27 INFO     connecting mtalk.google.com:5228
+2017-03-09 22:30:34 INFO     connecting clients1.google.com:443
+2017-03-09 22:30:55 INFO     connecting clients4.google.com:443
+2017-03-09 22:31:05 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:31:05 INFO     connecting clients4.google.com:443
+2017-03-09 22:31:12 INFO     connecting notifications.google.com:443
+2017-03-09 22:31:23 INFO     connecting www.google.com:443
+2017-03-09 22:31:23 INFO     connecting www.google.com:443
+2017-03-09 22:31:23 INFO     connecting www.google.com:443
+2017-03-09 22:31:23 INFO     connecting www.google.com:443
+2017-03-09 22:31:23 INFO     connecting www.google.com:443
+2017-03-09 22:31:23 INFO     connecting www.google.com:443
+2017-03-09 22:31:33 INFO     connecting www.google.com:443
+2017-03-09 22:31:33 INFO     connecting www.google.com:443
+2017-03-09 22:31:33 INFO     connecting www.google.com:443
+2017-03-09 22:31:33 INFO     connecting www.google.com:443
+2017-03-09 22:31:33 INFO     connecting www.google.com:443
+2017-03-09 22:31:33 INFO     connecting www.google.com:443
+2017-03-09 22:31:33 INFO     connecting www.google.com:443
+2017-03-09 22:31:33 INFO     connecting www.google.com:443
+2017-03-09 22:31:33 INFO     connecting www.google.com:443
+2017-03-09 22:31:33 INFO     connecting www.google.com:443
+2017-03-09 22:31:33 INFO     connecting www.google.com:443
+2017-03-09 22:32:30 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:32:30 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:32:30 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:32:30 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:32:30 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:32:30 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:32:30 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:32:30 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:32:30 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:32:30 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:32:30 INFO     connecting clients4.google.com:443
+2017-03-09 22:32:32 INFO     connecting mtalk.google.com:5228
+2017-03-09 22:34:09 INFO     connecting clients5.google.com:443
+2017-03-09 22:34:12 INFO     connecting ogs.google.com:443
+2017-03-09 22:34:17 INFO     connecting notifications.google.com:443
+2017-03-09 22:34:17 INFO     connecting play.google.com:443
+2017-03-09 22:34:17 INFO     connecting apis.google.com:443
+2017-03-09 22:34:18 INFO     connecting play.google.com:443
+2017-03-09 22:34:37 INFO     connecting mtalk.google.com:5228
+2017-03-09 22:35:30 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:35:30 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:35:30 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:35:30 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:35:30 INFO     connecting clients4.google.com:443
+2017-03-09 22:36:42 INFO     connecting mtalk.google.com:5228
+2017-03-09 22:37:31 INFO     connecting www.google.com:443
+2017-03-09 22:37:36 INFO     connecting ogs.google.com:443
+2017-03-09 22:37:41 INFO     connecting notifications.google.com:443
+2017-03-09 22:37:41 INFO     connecting play.google.com:443
+2017-03-09 22:37:41 INFO     connecting apis.google.com:443
+2017-03-09 22:37:42 INFO     connecting play.google.com:443
+2017-03-09 22:37:52 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:37:52 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:37:52 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:37:52 INFO     connecting clients1.google.com:443
+2017-03-09 22:37:56 INFO     connecting clients4.google.com:443
+2017-03-09 22:38:48 INFO     connecting mtalk.google.com:5228
+2017-03-09 22:39:19 INFO     connecting notifications.google.com:443
+2017-03-09 22:39:57 INFO     connecting www.google.com:443
+2017-03-09 22:39:57 INFO     connecting www.google.com:443
+2017-03-09 22:40:33 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:40:33 INFO     connecting apis.google.com:443
+2017-03-09 22:40:33 INFO     connecting clients5.google.com:443
+2017-03-09 22:40:36 INFO     connecting ogs.google.com:443
+2017-03-09 22:40:41 INFO     connecting play.google.com:443
+2017-03-09 22:40:46 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:40:46 INFO     connecting apis.google.com:443
+2017-03-09 22:40:53 INFO     connecting mtalk.google.com:5228
+2017-03-09 22:41:54 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:41:54 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:41:54 INFO     connecting google.com:443
+2017-03-09 22:42:58 INFO     connecting mtalk.google.com:5228
+2017-03-09 22:43:25 INFO     connecting www.google.com:443
+2017-03-09 22:43:36 INFO     connecting clients4.google.com:443
+2017-03-09 22:43:53 INFO     connecting clients5.google.com:443
+2017-03-09 22:43:54 INFO     connecting ogs.google.com:443
+2017-03-09 22:43:59 INFO     connecting apis.google.com:443
+2017-03-09 22:43:59 INFO     connecting notifications.google.com:443
+2017-03-09 22:43:59 INFO     connecting play.google.com:443
+2017-03-09 22:44:01 INFO     connecting play.google.com:443
+2017-03-09 22:45:03 INFO     connecting mtalk.google.com:5228
+2017-03-09 22:45:43 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:45:43 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:45:43 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:45:43 ERROR    [Errno 104] Connection reset by peer
+2017-03-09 22:45:43 INFO     connecting clients1.google.com:443
+2017-03-09 22:47:09 INFO     connecting mtalk.google.com:5228
+2017-03-09 22:49:14 INFO     connecting mtalk.google.com:5228
+2017-03-09 22:51:19 INFO     connecting mtalk.google.com:5228
+2017-03-09 22:53:25 INFO     connecting mtalk.google.com:5228
+2017-03-09 22:54:45 INFO     connecting clients4.google.com:443
+2017-03-09 22:55:30 INFO     connecting mtalk.google.com:5228
+2017-03-09 22:57:35 INFO     connecting mtalk.google.com:5228
+2017-03-09 22:59:40 INFO     connecting mtalk.google.com:5228
+2017-03-09 23:01:45 INFO     connecting mtalk.google.com:5228

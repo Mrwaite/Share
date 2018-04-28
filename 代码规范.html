@@ -1,0 +1,795 @@
+
+<!-- saved from url=(0042)https://api-spec.faas.elenet.me/#sec-3.1.1 -->
+<html style="overflow: visible;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+  html { margin: 0; padding: 0; background: white; color: black; }
+body { margin: 0 auto; padding: 0 1.5em 2em 2.5em; max-width: 80em; background: white; color: black; }
+
+@media screen {
+  html { background: bottom right linear-gradient(357deg, #A4A4A4 0, #CCCCCC 7.5em, #FFFFFF 60vh); }
+  body { margin-bottom: 60vh; }
+  :link, :visited { text-decoration: none; }
+  :link:hover, :visited:hover, :link:focus, :visited:focus { text-decoration: underline; }
+  :link { color: #00C; }
+  :visited { color: #609; }
+  :link:active, :visited:active { color: #C00; }
+  pre :link, pre :visited { color: inherit; background: transparent; }
+  pre:hover :link, pre:hover :visited { text-decoration: underline; }
+}
+
+@media (max-width: 767px) {
+  html { background: #fff; tab-size: 2; }
+  body { max-width: none; padding: 0 0.625em; }
+  pre, code, a { word-wrap: break-word; }
+  .selected-text-file-an-issue { left: 0; text-align: left; }
+}
+
+code { color: #666666; }
+code :link, :link code, code :visited, :visited code { color: orangered; }
+
+html, ::before { font: 1em/1.45 Helvetica Neue, sans-serif, Droid Sans Fallback; }
+h1, h2, h3, h4, h5, h6 { text-align: left; text-rendering: optimizeLegibility; text-shadow: white 0 0 2px; }
+h1, h2, h3 { color: #3c790a; background: transparent; }
+h1 { font: 900 200% Helvetica Neue, sans-serif, Droid Sans Fallback; }
+h1.allcaps { font: 900 350% Helvetica Neue, sans-serif, Droid Sans Fallback; letter-spacing: 2px; }
+h2 { font: 800 140% Helvetica Neue, sans-serif, Droid Sans Fallback; }
+h3 { font: 800 125% Helvetica Neue, sans-serif, Droid Sans Fallback; }
+h4 { font: 800 110% Helvetica Neue, sans-serif, Droid Sans Fallback; }
+h5 { font: 800 100% Helvetica Neue, sans-serif, Droid Sans Fallback; }
+h6 { font: 600 italic 100% Helvetica Neue, sans-serif, Droid Sans Fallback; }
+
+h2 { margin: 3em 0 1em 0; }
+h3, h4, h5, h6 { margin: 2em 0 1em 0; }
+h1 + h2, h2 + h3, h3 + h4, h4 + h5, h5 + h6, h1 + div.status + h2, h2 + div.status + h3, h3 + div.status + h4, h4 + div.status + h5, h5 + div.status + h6 { margin-top: 0.5em; }
+header + h2, header + hr + h2, header + hr + #configUI + h2, header + hr + #configUI + #updatesStatus + h2, h2.no-toc { margin-top: 2em; }
+hr { display: block; background: none; border: none; padding: 0; margin: 3em 0; height: auto; }
+p { margin: 1.25em 0; }
+pre { margin-left: 2em; white-space: pre-wrap; }
+p + * > li, p + div.status + * > li, dd li, p + * > li > p, p + div.status + * > li > p, dd li > p { margin: 1em 0; }
+@media (max-width: 767px) {
+  dd { margin-left: 0; }
+}
+
+.toc, .toc li { list-style: none; }
+body > .toc.brief > li { margin-top: 0.35em; margin-bottom: 0.35em; }
+body > .toc > li { margin-top: 1.75em; margin-bottom: 2.25em; }
+body > .toc > li > * > li { margin-top: 0.4em; margin-bottom: 0.6em; }
+body > .toc > li > * > li > * > li { margin-top: 0.2em; margin-bottom: 0.4em; }
+body > .toc > li > * > li > * > li > * > li { margin-top: 0.1em; margin-bottom: 0.2em; }
+.toc dfn, h1 dfn, h2 dfn, h3 dfn, h4 dfn, h5 dfn, h6 dfn { font: inherit; }
+@media (max-width: 767px) {
+  .toc { padding-left: 0.5em; }
+  .toc ol, dd { padding-left: 1.5em; }
+}
+
+dt, dfn { font-weight: bolder; font-style: normal; }
+i, em, dt dfn { font-style: italic; }
+pre, code { font-size: inherit; font-family: monospace, Droid Sans Fallback, Helvetica Neue, sans-serif; font-variant: normal; }
+pre strong { color: black; font: inherit; background: #DDFFDD; color: green; }
+pre small { color: silver; font: inherit; }
+pre em { font-weight: bolder; font-style: normal; }
+var sub { vertical-align: bottom; font-size: smaller; top: 0.1em; }
+table { border-collapse: collapse; border-style: hidden hidden none hidden; }
+table thead, table tbody { border-bottom: solid; }
+table tbody th { text-align: left; }
+table tbody th:first-child { border-left: solid; }
+table td, table th { border-left: solid; border-right: solid; border-bottom: solid thin; vertical-align: top; padding: 0.2em; }
+blockquote { margin: 0 0 0 2em; border: 0; padding: 0; font-style: italic; }
+
+img, object, p.overview { position: relative; z-index: 2; }
+img.extra, p.overview { float: right; }
+p > img:only-child { margin-left: 2em; }
+@media (max-width: 767px) {
+  img { max-width: 100%; object-fit: contain; }
+  img.extra, p.overview { float: none; }
+  p > img:only-child { margin-left: 0; }
+}
+
+.note { position: relative; color: green; background: #DDFFDD; font-style: italic; margin-left: 2em; padding: 1em 2em; }
+.note em, .note i, .note var { font-style: normal; }
+.note ul, .note ol { margin-top: 0; margin-bottom: 0; }
+span.note { padding: 0 2em; }
+.note p:first-child { margin-top: 0; }
+.note p:last-child { margin-bottom: 0; }
+dd > .note:first-child { margin-bottom: 0; }
+.note::before { content: '注意'; background: green; color: white; padding: 0.15em 0.25em; font-style: normal; position: absolute; top: -0.2em; left: -1.5em; transform: rotate(-5deg); }
+
+.request,
+.response
+{ color: #666; background: #EEEEEE; margin: 1em 0em 1em 2em; padding: 1em 3em; position: relative; }
+.request::before { font-style: normal; content: '请求'; background: #222; color: #EEE; padding: 0.15em 0.25em; font: 1em Helvetica Neue, sans-serif, Droid Sans Fallback; position: absolute; top: 0.2em; left: 0; transform: translateX(-50%) rotate(-5deg); }
+.response::before { font-style: normal; content: '响应'; background: #222; color: #EEE; padding: 0.15em 0.25em; font: 1em Helvetica Neue, sans-serif, Droid Sans Fallback; position: absolute; top: 0.2em; left: 0; transform: translateX(-50%) rotate(-5deg); }
+
+h1, h2, h3, h4, h5, h6, dt { page-break-after: avoid; }
+h2, h1 + h2, hr + h2.no-toc { page-break-before: auto ! important; }
+
+.brief { margin-top: 1em; margin-bottom: 1em; line-height: 1.1; }
+.brief > li { margin: 0; padding: 0; }
+.brief > li > p, .brief > li > ol, .brief > li > ul, .brief > li > dl {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+h4 { position: relative; z-index: 3; }
+
+.head { margin: 0 0 1em; padding: 1em 0 0 0; display: block; }
+.head p { margin: 0; }
+.head h1 { margin: 0; }
+.head h2 { margin-top: 0; }
+.head .logo img { position: absolute; top: 1em; right: 1em; border: none } /* remove border from top image */
+@media (max-width: 767px) {
+  .head .logo img { width: 4em; height: 4em; }
+}
+p.copyright { font-size: 0.6em; font-style: oblique; margin: 0; }
+p.copyright { text-align: center; }
+p.copyright > span { display: inline-block; border: none; }
+
+@media print {
+  html { font-size: 8pt; }
+  @page { margin: 1cm 1cm 1cm 1cm; }
+  @page :left {
+    @bottom-left {
+      font: 6pt Helvetica Neue, sans-serif, Droid Sans Fallback;
+      content: counter(page);
+      padding-top: 0em;
+      vertical-align: top;
+    }
+  }
+  @page :right {
+    @bottom-right {
+      font: 6pt Helvetica Neue, sans-serif, Droid Sans Fallback;
+      content: counter(page);
+      text-align: right;
+      vertical-align: top;
+      padding-top: 0em;
+    }
+  }
+  a[href^="#"]::after { font-size: 0.6em; vertical-align: super; padding: 0 0.15em 0 0.15em; content: "p" target-counter(attr(href), page); }
+  .toc a::after { font: inherit; vertical-align: baseline; padding: 0; content: leader('.') target-counter(attr(href), page); }
+  pre a[href^="#"]::after, blockquote a[href^="#"]::after { content: ""; padding: 0; }
+  table { font-size: smaller; }
+}
+
+</style><script>//console.log('a')
+</script><script>doAdblock();
+function doAdblock(){
+    (function() {
+        function A() {}
+        A.prototype = {
+            rules: {
+                'pps_pps': {
+                    'find': /^http:\/\/www\.iqiyi\.com\/player\/cupid\/common\/pps_flvplay_s\.swf/,
+                    'replace': 'http://swf.adtchrome.com/pps_20140420.swf'
+                },
+                '17173_in':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFile(Customer)?\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_in_20150522.swf"
+                },
+                '17173_out':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFileFirstpage\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_out_20150522.swf"
+                },
+                '17173_live':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream(_firstpage)?\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_stream_20150522.swf"
+                },
+                '17173_live_out':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream_(custom)?Out\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173.out.Live.swf"
+                }
+            },
+            _done: null,
+            get done() {
+                if(!this._done) {
+                    this._done = new Array();
+                }
+                return this._done;
+            },
+            addAnimations: function() {
+                var style = document.createElement('style');
+                style.type = 'text/css';
+                style.innerHTML = 'object,embed{\
+                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;\
+                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;\
+                -o-animation-duration:.001s;-o-animation-name:playerInserted;\
+                animation-duration:.001s;animation-name:playerInserted;}\
+                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}';
+                document.getElementsByTagName('head')[0].appendChild(style);
+            },
+            animationsHandler: function(e) {
+                if(e.animationName === 'playerInserted') {
+                    this.replace(e.target);
+                }
+            },
+            replace: function(elem) {
+                if (/http:\/\/v.youku.com\/v_show\/.*/.test(window.location.href)){
+                    var tag = document.getElementById("playerBox").getAttribute("player")
+                    if (tag == "adt"){
+                        console.log("adt adv")
+                        return;
+                    }
+                }
+                if(this.done.indexOf(elem) != -1) return;
+                this.done.push(elem);
+                var player = elem.data || elem.src;
+                if(!player) return;
+                var i, find, replace = false;
+                for(i in this.rules) {
+                    find = this.rules[i]['find'];
+                    if(find.test(player)) {
+                        replace = this.rules[i]['replace'];
+                        if('function' === typeof this.rules[i]['preHandle']) {
+                            this.rules[i]['preHandle'].bind(this, elem, find, replace, player)();
+                        }else{
+                            this.reallyReplace.bind(this, elem, find, replace)();
+                        }
+                        break;
+                    }
+                }
+            },
+            reallyReplace: function(elem, find, replace) {
+                elem.data && (elem.data = elem.data.replace(find, replace)) || elem.src && ((elem.src = elem.src.replace(find, replace)) && (elem.style.display = 'block'));
+                var b = elem.querySelector("param[name='movie']");
+                this.reloadPlugin(elem);
+            },
+            reloadPlugin: function(elem) {
+                var nextSibling = elem.nextSibling;
+                var parentNode = elem.parentNode;
+                parentNode.removeChild(elem);
+                var newElem = elem.cloneNode(true);
+                this.done.push(newElem);
+                if(nextSibling) {
+                    parentNode.insertBefore(newElem, nextSibling);
+                } else {
+                    parentNode.appendChild(newElem);
+                }
+            },
+            init: function() {
+                var handler = this.animationsHandler.bind(this);
+                document.body.addEventListener('webkitAnimationStart', handler, false);
+                document.body.addEventListener('msAnimationStart', handler, false);
+                document.body.addEventListener('oAnimationStart', handler, false);
+                document.body.addEventListener('animationstart', handler, false);
+                this.addAnimations();
+            }
+        };
+        new A().init();
+    })();
+}
+// 20140730
+(function cnbeta() {
+    if (document.URL.indexOf('cnbeta.com') >= 0) {
+        var elms = document.body.querySelectorAll("p>embed");
+        Array.prototype.forEach.call(elms, function(elm) {
+            elm.style.marginLeft = "0px";
+        });
+    }
+})();
+//baidu
+if(document.URL.indexOf('www.baidu.com') >= 0){
+    if(document && document.getElementsByTagName && document.getElementById && document.body){
+        var aa = function(){
+            var all = document.body.querySelectorAll("#content_left div,#content_left table");
+            for(var i = 0; i < all.length; i++){
+                if(/display:\s?(table|block)\s!important/.test(all[i].getAttribute("style"))){all[i].style.display= "none";all[i].style.visibility='hidden';}
+            }
+            all = document.body.querySelectorAll('.result.c-container[id="1"]');
+            for(var i = 0; i < all.length; i++){
+                var dataClick = all[i].getAttribute('data-click');
+                if(dataClick.indexOf('rsv_cd')>-1) continue;
+                all[i].style.display= "none";all[i].style.visibility='hidden';
+            }
+        }
+        aa();
+        document.getElementById('wrapper_wrapper').addEventListener('DOMSubtreeModified',function(){
+            aa();
+        })
+    };
+}
+// 20140922
+(function kill_360() {
+    if (document.URL.indexOf('so.com') >= 0) {
+        document.getElementById("e_idea_pp").style.display = none;
+    }
+})();
+//解决腾讯视频列表点击无效
+if(document.URL.indexOf("v.qq.com") >= 0){
+    if (document.getElementById("mod_videolist")){
+        var listBox = document.getElementById("mod_videolist")
+        var list = listBox.getElementsByClassName("list_item")
+        for (i = 0;i < list.length;i++){
+            list[i].addEventListener("click", function() {
+                var url = this.getElementsByTagName("a")[0]
+                url = url.getAttribute("href")
+                var host = window.location.href
+                url = host.replace(/cover\/.*/,url)
+                window.location.href = url
+            })
+        }
+    }
+}
+if (document.URL.indexOf("tv.sohu.com") >= 0){
+    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+}
+if (document.URL.indexOf("56.com") >= 0){
+    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+}
+</script><style type="text/css">object,embed{                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;                -o-animation-duration:.001s;-o-animation-name:playerInserted;                animation-duration:.001s;animation-name:playerInserted;}                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}</style><meta name="chromesniffer" id="chromesniffer_meta" content="{}"><script type="text/javascript" src="chrome-extension://fhhdlnnepfjhlhilgmeepgkhjmhhhjkh/js/detector.js"></script><style>@-moz-keyframes nodeInserted{from{opacity:0.99;}to{opacity:1;}}@-webkit-keyframes nodeInserted{from{opacity:0.99;}to{opacity:1;}}@-o-keyframes nodeInserted{from{opacity:0.99;}to{opacity:1;}}@keyframes nodeInserted{from{opacity:0.99;}to{opacity:1;}}embed,object{animation-duration:.001s;-ms-animation-duration:.001s;-moz-animation-duration:.001s;-webkit-animation-duration:.001s;-o-animation-duration:.001s;animation-name:nodeInserted;-ms-animation-name:nodeInserted;-moz-animation-name:nodeInserted;-webkit-animation-name:nodeInserted;-o-animation-name:nodeInserted;}</style></head><body class="__reader_view_article_wrap_6139030245366994__"><div class="head">
+<h1 id="sec-API">Web API 设计规范</h1>
+</div>
+<h2>目录</h2>
+
+<ol class="toc">
+  <li> <a class="short" href="https://api-spec.faas.elenet.me/#sec-1"><span class="secno">1 </span>动机</a> </li>
+  <li> <a class="short" href="https://api-spec.faas.elenet.me/#sec-2"><span class="secno">2 </span>一致性</a> </li>
+  <li>
+    <a class="short" href="https://api-spec.faas.elenet.me/#sec-3"><span class="secno">3 </span>通用格式约定</a>
+    <ol>
+      <li>
+        <a class="short" href="https://api-spec.faas.elenet.me/#sec-3.1"><span class="secno">3.1 </span>HTTP 头定义</a>
+        <ol>
+          <li> <a class="short" href="https://api-spec.faas.elenet.me/#sec-3.1.1"><span class="secno">3.1.1 </span>Content-Type</a> </li>
+          <li> <a class="short" href="https://api-spec.faas.elenet.me/#sec-3.1.2"><span class="secno">3.1.2 </span>CORS</a> </li>
+        </ol>
+      </li>
+      <li>
+        <a class="short" href="https://api-spec.faas.elenet.me/#sec-3.2"><span class="secno">3.2 </span>数据格式</a>
+        <ol>
+          <li> <a class="short" href="https://api-spec.faas.elenet.me/#sec-3.2.1"><span class="secno">3.2.1 </span>JSON</a> </li>
+          <li> <a class="short" href="https://api-spec.faas.elenet.me/#sec-3.2.2"><span class="secno">3.2.2 </span>日期时间</a> </li>
+          <li> <a class="short" href="https://api-spec.faas.elenet.me/#sec-3.2.3"><span class="secno">3.2.3 </span>文件</a> </li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <a class="short" href="https://api-spec.faas.elenet.me/#sec-4"><span class="secno">4 </span>RESTful 部分</a>
+    <ol>
+      <li>
+        <a class="short" href="https://api-spec.faas.elenet.me/#sec-4.1"><span class="secno">4.1 </span>列表操作</a>
+        <ol>
+          <li> <a class="short" href="https://api-spec.faas.elenet.me/#sec-4.1.1"><span class="secno">4.1.1 </span>获取列表</a> </li>
+          <li> <a class="short" href="https://api-spec.faas.elenet.me/#sec-4.1.2"><span class="secno">4.1.2 </span>操作列表内的资源</a> </li>
+          <li> <a class="short" href="https://api-spec.faas.elenet.me/#sec-4.1.3"><span class="secno">4.1.3 </span>删除列表内的资源</a> </li>
+          <li> <a class="short" href="https://api-spec.faas.elenet.me/#sec-4.1.4"><span class="secno">4.1.4 </span>创建资源到列表</a> </li>
+          <li> <a class="short" href="https://api-spec.faas.elenet.me/#sec-4.1.5"><span class="secno">4.1.5 </span>获取列表额外信息</a> </li>
+          <li> <a class="short" href="https://api-spec.faas.elenet.me/#sec-4.1.6"><span class="secno">4.1.6 </span>列表事务处理</a> </li>
+        </ol>
+      </li>
+      <li>
+        <a class="short" href="https://api-spec.faas.elenet.me/#sec-4.2"><span class="secno">4.2 </span>资源操作</a>
+        <ol>
+          <li> <a class="short" href="https://api-spec.faas.elenet.me/#sec-4.2.1"><span class="secno">4.2.1 </span>获取资源</a> </li>
+          <li> <a class="short" href="https://api-spec.faas.elenet.me/#sec-4.2.2"><span class="secno">4.2.2 </span>更新资源</a> </li>
+          <li> <a class="short" href="https://api-spec.faas.elenet.me/#sec-4.2.3"><span class="secno">4.2.3 </span>修改资源</a> </li>
+          <li> <a class="short" href="https://api-spec.faas.elenet.me/#sec-4.2.4"><span class="secno">4.2.4 </span>获取资源额外信息</a> </li>
+          <li> <a class="short" href="https://api-spec.faas.elenet.me/#sec-4.2.5"><span class="secno">4.2.5 </span>资源事务处理</a> </li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <a class="short" href="https://api-spec.faas.elenet.me/#sec-5"><span class="secno">5 </span>非 RESTful 部分</a>
+    <ol>
+      <li>
+        <a class="short" href="https://api-spec.faas.elenet.me/#sec-5.1"><span class="secno">5.1 </span>会话</a>
+        <ol>
+          <li>
+            <a class="short" href="https://api-spec.faas.elenet.me/#sec-5.1.1"><span class="secno">5.1.1 </span>会话操作</a>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="sec-1">1 动机</h2>
+
+<p>现代 Web 项目的部署一般是前后端分离，Web API 和 Web Resource 单独部署，开发人员也分为前端开发和后端开发。</p>
+<p>为了减少前后端开发沟通 Web API 的成本，并增强 Web API 的可读性、可维护性，提供了这么一套规范，遵循这套规范可以在 HTTP 到前端的处理上做到一定程度的优化。</p>
+
+<h2 id="sec-2">2 一致性</h2>
+
+<p>这份规范中的示例 URL 中，使用冒号「:」开头的路径都表示一个通用的名称，具体实现可以使用自己希望的名称来定义。</p>
+
+<p>这份规范中的示例片段使用了 HTTP/1.1 的报文格式，具体实现可以使用 HTTP 的其它版本。</p>
+
+<h2 id="sec-3">3 通用格式约定</h2>
+
+<h3 id="sec-3.1">3.1 HTTP 头定义</h3>
+
+<h4 id="sec-3.1.1">3.1.1 Content-Type</h4>
+
+<p>在这套 API 规范中，所有请求和响应的实体部分都根据头中描述的 <code>Content-Type</code> 来解析，如果没有设置默认以 <code>application/json</code> 来解析。
+
+</p><div class="note">
+前端应该根据 <code>Content-Type</code> 来解析后端的响应。因为后端的响应往往会被中间层或代理层破坏，无法确保 <code>Content-Type</code> 总是 <code>application/json</code>。
+</div>
+
+<h4 id="sec-3.1.2">3.1.2 CORS</h4>
+
+<p>前后端部署分离的项目前端通常会跨域调用 API，所以 API 上需要加上跨域调用的支持。</p>
+
+<p>这套规范会涉及到以下这些 CORS 相关的响应头，如果有跨域需求建议给所有 API 都带上。</p>
+
+<ul>
+  <li>
+    <code>Access-Control-Allow-Origin</code><br>
+    这个头的取值和请求头中的 <code>Origin</code> 保持一致（如果请求头中没有 <code>Origin</code> 就不需要这个响应头）。
+    后端应该判断 <code>Origin</code> 是不是一个可信赖的源，如果不是应该响应 <code>403</code> 状态码拒绝访问。
+  </li>
+  <li><code>Access-Control-Allow-Method</code>: <code>OPTION</code>, <code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>PATCH</code>, <code>DELETE</code></li>
+  <li><code>Access-Control-Allow-Headers</code>: <code>Content-Type</code></li>
+  <li><code>Access-Control-Allow-Credentials</code>: <code>true</code></li>
+</ul>
+
+<p>此外，所有带 <code>POST</code> 请求的 API 都应该同时支持 <code>OPTIONS</code> 请求。并且 <code>OPTIONS</code> 请求不处理任何业务逻辑，只是带着上面列出的响应头直接响应。</p>
+
+<div class="note">
+这些是浏览器行为，是跨域部署必须的，具体可以参考 <a href="https://www.w3.org/TR/cors/" target="_blank">W3C CORS</a> 规范。
+</div>
+
+<h3 id="sec-3.2">3.2 数据类型</h3>
+
+<h4 id="sec-3.2.1">3.2.1 JSON</h4>
+
+<p>这套规范中，数据类型都是基于 JSON 描述的，JSON 支持的数据类型有以下这些：</p>
+
+<ul class="brief">
+  <li><code>Number</code></li>
+  <li><code>String</code></li>
+  <li><code>Boolean</code></li>
+  <li><code>Object</code></li>
+  <li><code>Array</code></li>
+  <li><code>Null</code></li>
+</ul>
+
+需要注意的是，由于前端是 JavaScript，<code>Number</code> 类型对应的实际上是 64 位的 IEEE754 浮点数。
+所以，它能精确描述的整数范围是从 -9007199254740991 到 9007199254740991，这意味着无法支持 int 64 这样的超大整型，这种情况下请使用字符串传输。
+
+<h4 id="sec-3.2.2">3.2.2 日期时间</h4>
+
+<p>在这套规范中，日期时间类型推荐使用 <a href="http://www.iso.org/iso/home/standards/iso8601.html" target="_blabk">ISO 8601</a>（见 <a href="https://tools.ietf.org/html/rfc3339" target="_blabk">RFC 3339</a> 中的 <code>date-time</code> 定义） 的标准日期时间格式传输。</p>
+
+<p>
+  <code>2016-05-17T17:24:41.324Z</code> 
+  或者
+  <code>2016-05-18T01:24:41.324+08:00</code>
+</p>
+
+<p>这是为了避免直接使用 YYYY-MM-DD 格式时遇到客户端时区不正确造成解析错误的问题，</p>
+
+<h4 id="sec-3.3.3">3.3.3 文件</h4>
+
+<p>文件传输的 API 设计比较特殊，如果使用 FormData，建议对「文件上传」这件事情开发单独的接口，不带其它参数，专注传文件。
+
+</p><div class="note">
+因为 FormData 中的其它数据是没有类型的，只能区分文件和非文件。
+</div>
+
+<p>如果希望在一个复杂的请求实体中加上文件，可以将文件转换成 <a href="http://tools.ietf.org/html/rfc2397" target="_blank">Data URL（RFC 2397）</a>格式，作为 JSON 中的字符串格式传输。</p>
+
+<p>比如一个 html 文件的内容是：</p>
+
+<pre>&lt;h1&gt;test&lt;/h1&gt;
+</pre>
+
+<p>那么它可以被转换成一个这样的字符串传输</p>
+
+<pre>data:text/html;base64,PGgxPnRlc3Q8L2gxPg==
+</pre>
+
+<div class="note">
+对于纯文本的数据转换 Data URL，直接 encodeURIComponent 即可，base64 不是必须的。
+</div>
+
+
+<h3 id="sec-3.4">3.4 异常处理</h3>
+
+<h4 id="sec-3.4.1">3.4.1 状态码</h4>
+
+<p>这套 API 使用 HTTP 状态码描述响应的基本状态，这样可以使用通用的监控和报警服务处理 API。</p>
+
+<p>对于一个来自请求的异常，服务器应该响应 4xx 状态码，比如请求的参数类型错误、资源找不到等。这些问题都是可以通过排查解决的，比如改正请求的参数格式等。大部分时候 4xx 错误都是在开发阶段解决的。</p>
+
+<p>5xx 状态码表示服务内部错误，比如数据库查询超时、依赖的其它服务给了错误的响应。这类错误通常是运行时产生的。</p>
+
+<div class="note">
+这套 API 并不强制约定所有的状态码都必须完全符合 HTTP 的定义，但底线是状态码的第一位数必须符合语义。
+</div>
+
+<p>所有的异常响应，其内容都是一个固定格式的 JSON 数据，比如</p>
+
+<pre class="response">HTTP/1.1 500 Internal Server Error
+
+{
+  "name": "UNKNOWN_SERVER_ERROR",
+  "message": "服务器未知错误"
+}
+</pre>
+
+<pre class="response">HTTP/1.1 404 Not Found
+
+{
+  "name": "RESOURCE_NOT_FOUND",
+  "message": "资源未找到"
+}
+</pre>
+
+<div class="note">
+这个响应中的 name 和 message 是必须的，实现可以自己扩展一些其它数据。
+</div>
+
+<h2 id="sec-4">4 RESTful 部分</h2>
+
+REST 风格的 API 将所有东西都视为资源（可以理解为文件）和列表（可以理解为目录）。
+
+
+<h3 id="sec-4.1">4.1 列表操作</h3>
+
+<p>
+列表通常以名词的复数形式或者复数性质的词来命名，比如 comments、xxxlist。这样可以更容易地区分开列表和普通资源。
+</p>
+
+<h4 id="sec-4.1.1">4.1.1 获取列表</h4>
+
+<p>
+使用 <code>GET</code> 方法，来获取一个列表。
+</p>
+
+<pre class="request">GET /:list?limit=2 HTTP/1.1
+</pre>
+<pre class="response">HTTP/1.1 200 OK
+
+[
+  {
+    "id": 1,
+    "name": "value1",
+    "field2": "value2",
+    "field3": "value3"
+  },
+  {
+    "id": 2,
+    "field1": "value1",
+    "field2": "value2",
+    "field3": "value3"
+  }
+]
+</pre>
+
+<div class="note">
+  列表中的每个记录必须有唯一的 id 字段（虽然上面的例子中 id 是数值，实际上可以是任何类型），其它字段都是可选的，由具体接口文档定义。
+</div>
+
+
+<h4 id="sec-4.1.2">4.1.2 操作列表内的资源</h4>
+
+<p>列表可以视为一个目录，这个目录中包含了若干以 id 命名的文件。访问列表资源可以在列表后面加上资源 id 即可。</p>
+
+<p>比如获取列表内的某个资源可以这么做</p>
+
+<pre class="request">GET /:list/:id HTTP/1.1</pre>
+
+对列表内的资源操作和普通的资源操作一样，可以参考「<a href="https://api-spec.faas.elenet.me/#sec-4.2">4.2. 资源</a>」。
+
+
+
+<h4 id="sec-4.1.3">4.1.3 删除列表内的资源</h4>
+
+删除列表内的资源可以针对资源的 URL 直接使用 <code>DELETE</code> 方法操作。
+
+<pre class="request">DELETE /:list/:id HTTP/1.1</pre>
+
+<pre class="response">HTTP/1.1 204 No Content</pre>
+
+
+<h4 id="sec-4.1.4">4.1.4 创建资源到列表</h4>
+
+<p>标准的资源创建可以直接对列表做 <code>POST</code> 操作，并带资源的所有数据，类似「<a href="https://api-spec.faas.elenet.me/#sec-4.2.2">4.2.1 更新资源</a>」的操作，只不过不需要指定 id。</p>
+
+<pre class="request">POST /:list HTTP/1.1
+
+{
+  "field1": "value1",
+  "field2": "value2",
+  "field3": "value3",
+  "field4": "value4"
+}
+</pre>
+
+<p>创建资源后可以直接响应这个资源的相关信息，建议响应 id。</p>
+
+<pre class="response">HTTP/1.1 200 OK
+
+{
+  "id": 123
+}
+</pre>
+
+<p>也可以响应一个 <code>303</code> 重定向，让客户端转而请求这个创建后的资源。</p>
+
+<pre class="response">HTTP/1.1 303 See Other
+Location: /:list/123
+</pre>
+<p>客户端遇到 <code>303</code> 状态码后会自动向 <code>Location</code> 指定的 URI 发起 <code>GET</code> 请求。</p>
+<div class="note">
+  使用 303 来响应 POST 会造成一次多余的 HTTP 请求，而且如果资源中不包含 id 的话前端获取资源 id 会比较麻烦。
+</div>
+
+<h4 id="sec-4.1.5">4.1.5 获取列表额外信息</h4>
+
+<p>列表除了列表项之外可能还包含一些额外信息，比如列表总长度、列表最后更新时间等。</p><p>
+
+</p><p>如果视列表为一个目录的话，我们将这些额外的信息视为目录下除了标准列表项外的其它资源，使用和资源一样的方式操作。</p><p>
+
+</p><pre class="request">GET /:list/:resource HTTP/1.1
+</pre>
+
+<p>具体参考「<a href="https://api-spec.faas.elenet.me/#sec-4.2">4.2 资源操作</a>」。</p>
+
+<p>额外信息也可以是一个列表。</p>
+
+<pre class="request">GET /:list/:sublist HTTP/1.1
+</pre>
+
+<p>具体参考「<a href="https://api-spec.faas.elenet.me/#sec-4.1">4.1 列表操作</a>」。</p>
+
+<div class="note">
+这些信息的名称定义可能和列表内的资源 id 或事务名冲突，建议在 id 的定义规则上避免这样的冲突，比如使用数值或 hash 作为 id，使用名词作为额外资源名，使用动词或动名词作为事务名。
+</div>
+
+<h4 id="sec-4.1.6">4.1.6 列表事务处理</h4>
+
+<p>有些列表除了资源操作外还有一些非常复杂的操作，我们认为这是一种事务。比如「下单」这样的操作肯定不是简单地创建一个「订单」资源，它还会做修改库存、修改账户余额等一系列操作，它就是一个事务。</p><p>
+
+</p><p>对于这种事务级别的操作，我们统一使用 <code>POST</code> 方法，并把事务名「像资源一样」写在列表的后面，可以理解为向服务器发起某种操作请求。</p><p>
+
+</p><pre class="request">POST /:list/:action HTTP/1.1
+</pre>
+
+对于事务级别的操作，这份规范对其相应的内容不做约束，由具体的文档来说明。
+
+
+<h3 id="sec-4.2">4.2 资源操作</h3>
+
+<h4 id="sec-4.2.1">4.2.1 获取资源</h4>
+
+所有资源都可以通过 <code>GET</code> 方法来获取其内容。
+
+<pre class="request">GET /:resource HTTP/1.1
+</pre>
+
+<pre class="response">HTTP/1.1 200 OK
+
+{
+  "field1": "value1",
+  "field2": "value2",
+  "field3": "value3",
+  "field4": "value4"
+}
+</pre>
+
+
+<h4 id="sec-4.2.2">4.2.2 更新资源</h4>
+
+<p>可以将 <code>PUT</code> 视为是 <code>GET</code> 的一个逆操作。</p>
+
+<pre class="request">PUT /:resource HTTP/1.1
+
+{
+  "field1": "value1",
+  "field2": "new value",
+  "field3": "value3",
+  "field4": "value4"
+}
+</pre>
+
+<pre class="response">HTTP/1.1 204 No Content</pre>
+
+<p>这里的 :resource 只能是一个资源，不能是列表（列表是没有 PUT 方法的）。比如更新一个全局资源：</p>
+
+<pre class="request">PUT /config HTTP/1.1
+
+{}
+</pre>
+
+<p>也可能是一个列表项</p>
+
+<pre class="request">PUT /mylist/123 HTTP/1.1
+
+{}
+</pre>
+
+<div class="note">
+  请求实体的结构与「获取资源」完全保持一致，即使某个字段的值没有改变也带上原来的值。
+</div>
+
+<h4 id="sec-4.2.3">4.2.3 修改资源</h4>
+
+<code>PUT</code> 方法是对整个资源的更新，如果希望只对资源的某一部分做更新操作可以使用 <code>PATCH</code> 方法。
+
+<pre class="request">PATCH /:resource  HTTP/1.1
+
+{
+  "field3": "new value"
+}
+</pre>
+
+<pre class="response">HTTP/1.1 204 No Content</pre>
+
+<div class="note">
+  <ul>
+    <li>只针对请求实体中有带上的字段做修改</li>
+  </ul>
+</div>
+
+<p>这里的 :resource 只能是一个资源，不能是列表（列表是没有 PATCH 方法的）。比如修改一个全局资源：</p>
+
+<pre class="request">PATCH /config HTTP/1.1
+
+{ "banner": true }
+</pre>
+
+也可能是一个列表项
+
+<pre class="request">PATCH /mylist/123 HTTP/1.1
+
+{ "name": "hehe" }
+</pre>
+
+<h4 id="sec-4.2.4">4.2.4 获取资源额外信息</h4>
+
+<p>资源除了自己的信息外还可以提供额外信息，这种情况下我们将这个资源本身视为一个目录，具体操作可以参考「<a href="https://api-spec.faas.elenet.me/#sec-4.1.5">4.1.5 获取列表额外信息</a>」。</p>
+
+<h4 id="sec-4.2.5">4.2.5 资源事务处理</h4>
+
+<p>资源也可以有相关的事务，比如「取消订单」这个操作不仅仅是一个「修改订单状态」那么简单，可能还会有修改库存、修改用户余额等操作，它实际上就是一个事务。</p>
+
+<p>对于资源的事务处理的细则，可以参考「<a href="https://api-spec.faas.elenet.me/#sec-4.1.6">4.1.6 列表事务处理</a>」。</p>
+
+
+<h2 id="sec-5">5 非 RESTful 部分</h2>
+
+<h3 id="sec-5.1">5.1 会话</h3>
+
+<p>由于会话通常关联一些敏感信息，暴露给前端就可能出现安全问题。这份规范中通过 HTTP Only 的 Cookie 来处理会话。并且所有与会话有关的操作都放在一个 :session 目录下，或者如果有条件的话可以使用一个独立的域名来部署。</p>
+
+<pre class="request">GET /:session HTTP/1.1
+
+{
+  "username": "hehe"
+}
+</pre>
+
+<div class="note">
+所谓会话就是用户相关的东西，比如获取用户信息、登陆等。
+</div>
+
+<h4 id="sec-5.1.1">5.1.1 会话操作</h4>
+
+<p>会话本身可以视为一个资源，可以作为资源操作，具体参考「<a href="https://api-spec.faas.elenet.me/#sec-4.2">4.2. 资源</a>」。</p>
+
+<p>比如一个具体的登录接口可能这么设计：</p>
+
+<pre class="request">POST /user/login HTTP/1.1
+
+{
+  "username": "hehe",
+  "password": "***"
+}
+</pre>
+
+<h2 id="sec-references">引用</h2>
+
+<ul>
+  <li><a href="https://www.w3.org/TR/cors/" target="_blank">W3C CORS</a></li>
+  <li><a href="http://www.iso.org/iso/home/standards/iso8601.html" target="_blabk">ISO 8601</a></li>
+  <li><a href="https://tools.ietf.org/html/rfc3339" target="_blabk">RFC 3339</a></li>
+  <li><a href="http://tools.ietf.org/html/rfc2397" target="_blank">Data URL（RFC 2397）</a></li>
+</ul>
+</body></html>
